@@ -13,20 +13,20 @@
         <th>To Currency</th>
     </tr>
     <tr>
-        <td><input type="text" id="tinhtoan"></td>
+        <td> <input type="text" id="tinhtoan"> </td>
         <td>
-            <select>
-                <option id="vnd">VND</option>
-                <option id="$">$</option>
+            <select name="" id="tien1">
+                <option value="vnd">VND</option>
+                <option value="$">$</option>
             </select>
         </td>
         <td>
-            <select>
-                <option id="vnd2">VND</option>
-                <option id="$2">$</option>
+            <select name="" id="tien2">
+                <option value="vnd">VND</option>
+                <option value="$">$</option>
             </select>
         </td>
-        <td><button type="submit" ONCLICK="bam_vao">Convert </button></td>
+        <td> <button ONCLICK="bam_vao()">Convert </button> </td>
     </tr>
 
 </table>
@@ -34,5 +34,20 @@
 </body>
 </html>
 <script>
+function bam_vao() {
+    let giatri = document.getElementById('tinhtoan').value;
+    let tien1 = document.getElementById('tien1').value;
+    let tien2 = document.getElementById('tien2').value;
+    if (tien1 == tien2) {
+        alert(giatri);
+    }
+    if (tien1 == "vnd" && tien2 == "$") {
+        alert(giatri / 23000)
+    }
+    if (tien1 == "$" && tien2 == "vnd") {
+        alert(giatri * 23000)
+    }
+}
+
 
 </script>
