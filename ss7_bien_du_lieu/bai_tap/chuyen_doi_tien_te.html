@@ -5,7 +5,6 @@
     <title>Chuyển đổi tiền tệ</title>
 </head>
 <body>
-<form>
 <table>
     <tr>
         <th>Amount</th>
@@ -30,24 +29,25 @@
     </tr>
 
 </table>
-</form>
+    <p id="giatri"> </p>
 </body>
 </html>
 <script>
 function bam_vao() {
-    let giatri = document.getElementById('tinhtoan').value;
+    let giatri1 = document.getElementById('tinhtoan').value;
     let tien1 = document.getElementById('tien1').value;
     let tien2 = document.getElementById('tien2').value;
-    if (tien1 == tien2) {
-        alert(giatri);
-    }
+    let bien;
     if (tien1 == "vnd" && tien2 == "$") {
-        alert(giatri / 23000)
+        bien = "Giá trị :" + (giatri1 / 23000) + "$"
     }
-    if (tien1 == "$" && tien2 == "vnd") {
-        alert(giatri * 23000)
+    else if (tien1 == "$" && tien2 == "vnd") {
+        bien ="Giá trị :" + (giatri1 * 23000) + "VNĐ"
     }
+    else if (tien1 == tien2) {
+        bien ="Giá trị :" + giatri1;
+    }
+    document.getElementById("giatri").innerHTML = bien;
+
 }
-
-
 </script>
