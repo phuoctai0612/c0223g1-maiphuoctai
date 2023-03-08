@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi độ C thành độ F</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Độ C</th>
+        <th> <input id="C"></th>
+        <th><button onclick="nhanvao()">Submit</button>
+    </th>
+    </tr>
+</table>
+<h3 id="F">Độ F</h3>
+
+</body>
+</html>
+<script>
+    function nhanvao() {
+        let doC = document.getElementById("C").value;
+        let dof = ( 9 * doC + 160 )/5;
+        document.getElementById("F").innerHTML = dof;
+    }
+</script>

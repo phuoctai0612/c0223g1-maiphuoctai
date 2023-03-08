@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Toán mệt mỏi</title>
+</head>
+<body>
+<div>
+<table>
+  <tr>
+      <th>Hoa</th>
+      <th>Toan</th>
+      <th>Ly</th>
+  </tr>
+    <tr>
+        <td ><input type="number" id="so1">
+        </td>
+        <td ><input type="number" id="so2">
+        </td>
+        <td ><input type="number" id="so3">
+        </td>
+       <th> <button onclick="nhanvao()"> Trung bình cộng</button> </th>
+    </tr>
+    </div>
+    <h3> Trung Bình Cộng</h3>
+    <div id="ketqua1">Kết quả là</div>
+<h3> Tổng điểm</h3>
+<div id="ketqua2">Kết quả là</div>
+</table>
+
+</body>
+</html>
+<script>
+    function nhanvao() {
+        let kq1 = document.getElementById("so1").value*1;
+        console.log(typeof kq1);
+        let kq2 = document.getElementById("so2").value*1;
+        console.log(typeof kq2);
+        let kq3 = document.getElementById("so3").value*1;
+        console.log(typeof kq3);
+        let tbc = ( kq1 +kq2 + kq3 )/3;
+        document.getElementById("ketqua1").innerHTML = tbc;
+        console.log(typeof tbc);
+        let tongdiem = kq1 + kq2+ kq3;
+        document.getElementById("ketqua2").innerHTML = tongdiem;
+    }
+ </script>

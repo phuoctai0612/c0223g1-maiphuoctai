@@ -5,33 +5,54 @@
     <title>Title</title>
 </head>
 <body>
-<form>
+<div>
     <table>
         <tr>
             <td><h1>Caculator</h1></td>
         </tr>
         <tr>
             <th>
-                <input id="nhap1" type="text">
-                <input id="nhap2" type="text">
+                <input id="nhap1" type="number">
+                <input id="nhap2" type="number">
             </th>
         </tr>
         <tr >
             <th> <br>
-                <button onclick=" nhapVao()">Addititon(+)</button>
-                <button onclick="nhapVao1">Subtraction(-)</button>
-                <button onclick="nhapVao2">Multiplication(*)</button>
-                <button onclick="nhapVao3">Division(/)</button>
+                <button onclick="nhapVao()">Addititon(+)</button>
+                <button onclick="nhapVao1()">Subtraction(-)</button>
+                <button onclick="nhapVao2()">Multiplication(*)</button>
+                <button onclick="nhapVao3()">Division(/)</button>
             </th>
         </tr>
     </table>
-
-</form>
-
+</div>
+    <h3>Result Division</h3>
+    <div id="ketqua1">Kết quả là</div>
 </body>
 <script>
     function nhapVao() {
-        let = phepcong = document.getElementById('nhap1').value;
+        let dongMot = document.getElementById("nhap1").value;
+        let dongHai = document.getElementById("nhap2").value;
+        let  ketqua = Number(dongMot) + Number(dongHai);
+        document.getElementById("ketqua1").innerHTML = ketqua;
+    }
+    function nhapVao1() {
+        let dongMot = document.getElementById("nhap1").value;
+        let dongHai = document.getElementById("nhap2").value;
+        let  ketqua = Number(dongMot) - Number(dongHai);
+        document.getElementById("ketqua1").innerHTML = ketqua;
+    }
+    function nhapVao2() {
+        let dongMot = document.getElementById("nhap1").value;
+        let dongHai = document.getElementById("nhap2").value;
+        let  ketqua = Number(dongMot) * Number(dongHai);
+        document.getElementById("ketqua1").innerHTML = ketqua;
+    }
+    function nhapVao3() {
+        let dongMot = document.getElementById("nhap1").value;
+        let dongHai = document.getElementById("nhap2").value;
+        let  ketqua = Number(dongMot) / Number(dongHai);
+        document.getElementById("ketqua1").innerHTML = ketqua;
     }
 </script>
 </html>
