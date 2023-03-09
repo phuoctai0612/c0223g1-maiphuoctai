@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let banHang = parseInt(prompt(" Lần này bán nhà được bao nhiêu"));
+    if (banHang >= 1000000000) {
+        alert(banHang * 2 / 100)
+    } else if (banHang < 1000000000 && banHang >= 100000000) {
+        alert(banHang * 1, 5 / 100)
+    } else if (banHang < 100000000 && banHang > 50000000) {
+        alert(banHang * 1 / 100)
+    } else {
+        alert("bán thì ít mà đòi hít đồ thơm")
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thầy ôn nội</title>
+</head>
+<body>
+<form>
+    <img id="anhthay" src="https://imgproxy7.tinhte.vn/vr0Ro7vORFQBY0I054nT3VtojaIgTnTqX4-eR7NYzAg/h:400/plain/https://photo2.tinhte.vn/data/attachment-files/2022/09/6113951_thay_ong_noi.jpg">
+    <p><h2>Bấm vào</h2></p>
+    <input type="button" id="nhanvao" value="Cho thầy đi tới" onclick="moveRight()">
+</form>
+
+</body>
+</html>
+<script>
+    let imgOjb= null;
+    imgOjb = document.getElementById("anhthay");
+    function init() {
+        imgOjb =document.getElementById("anhthay");
+        imgOjb.style.position = 'relative'
+        imgOjb.style.left = '0px'
+    }
+    function moveRight() {
+        imgOjb.style.left = parseInt(imgOjb.style.left) + 35 + 'px';
+    }
+    window.onload = init;
+</script>
