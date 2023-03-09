@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 1</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let chieuCao = prompt("Nhập chiều cao zô");
+    let canNang = prompt("Nhập cân nặng zô");
+    let bmi = (canNang / (Math.pow(chieuCao, 2)));
+    alert(bmi)
+
+    if (bmi < 18.5) {
+        alert("ốm yếu quá rồi");
+    } else if ( bmi < 25) {
+        alert("ổn áp");
+    } else if (bmi > 25 && bmi < 30) {
+        alert("hơi thừa");
+    } else if (bmi > 30) {
+        alert("cần tập thể dục gấp")
+    } else {
+        alert("nhập tào lao")
+    }
+</script>

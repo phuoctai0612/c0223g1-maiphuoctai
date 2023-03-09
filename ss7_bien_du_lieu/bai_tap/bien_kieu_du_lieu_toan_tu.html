@@ -5,7 +5,6 @@
     <title>Tính Toán mệt mỏi</title>
 </head>
 <body>
-<div>
 <table>
   <tr>
       <th>Hoa</th>
@@ -21,7 +20,6 @@
         </td>
        <th> <button onclick="nhanvao()"> Trung bình cộng</button> </th>
     </tr>
-    </div>
     <h3> Trung Bình Cộng</h3>
     <div id="ketqua1">Kết quả là</div>
 <h3> Tổng điểm</h3>
@@ -32,16 +30,16 @@
 </html>
 <script>
     function nhanvao() {
-        let kq1 = document.getElementById("so1").value*1;
-        console.log(typeof kq1);
-        let kq2 = document.getElementById("so2").value*1;
-        console.log(typeof kq2);
-        let kq3 = document.getElementById("so3").value*1;
-        console.log(typeof kq3);
-        let tbc = ( kq1 +kq2 + kq3 )/3;
-        document.getElementById("ketqua1").innerHTML = tbc;
-        console.log(typeof tbc);
-        let tongdiem = kq1 + kq2+ kq3;
+        let ketQua1 = document.getElementById("so1").value*1;
+        console.log(typeof ketQua1);
+        let ketQua2 = document.getElementById("so2").value*1;
+        console.log(typeof ketQua2);
+        let ketQua3 = document.getElementById("so3").value*1;
+        console.log(typeof ketQua3);
+        let trungBinhCong = ( ketQua1 +ketQua2 + ketQua3 )/3;
+        document.getElementById("ketqua1").innerHTML = trungBinhCong;
+        console.log(typeof trungBinhCong);
+        let tongdiem = ketQua1 + ketQua2+ ketQua3;
         document.getElementById("ketqua2").innerHTML = tongdiem;
     }
  </script>

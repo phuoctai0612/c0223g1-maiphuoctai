@@ -12,7 +12,7 @@
         <th>To Currency</th>
     </tr>
     <tr>
-        <td> <input type="text" id="tinhtoan"> </td>
+        <td><input type="text" id="tinhtoan"></td>
         <td>
             <select name="" id="tien1">
                 <option value="vnd">VND</option>
@@ -25,29 +25,29 @@
                 <option value="$">$</option>
             </select>
         </td>
-        <td> <button ONCLICK="bam_vao()">Convert </button> </td>
+        <td>
+            <button ONCLICK="doiTien()">Convert</button>
+        </td>
     </tr>
 
 </table>
-    <p id="giatri"> </p>
+<p id="giatri"></p>
 </body>
 </html>
 <script>
-function bam_vao() {
-    let giatri1 = document.getElementById('tinhtoan').value;
-    let tien1 = document.getElementById('tien1').value;
-    let tien2 = document.getElementById('tien2').value;
-    let bien;
-    if (tien1 == "vnd" && tien2 == "$") {
-        bien = "Giá trị :" + (giatri1 / 23000) + "$"
-    }
-    else if (tien1 == "$" && tien2 == "vnd") {
-        bien ="Giá trị :" + (giatri1 * 23000) + "VNĐ"
-    }
-    else if (tien1 == tien2) {
-        bien ="Giá trị :" + giatri1;
-    }
-    document.getElementById("giatri").innerHTML = bien;
+    function doiTien() {
+        let soTien = document.getElementById('tinhtoan').value;
+        let tien1 = document.getElementById('tien1').value;
+        let tien2 = document.getElementById('tien2').value;
+        let ketQua;
+        if (tien1 == "vnd" && tien2 == "$") {
+            ketQua = "Giá trị :" + (soTien / 23000) + "$";
+        } else if (tien1 == "$" && tien2 == "vnd") {
+            ketQua = "Giá trị :" + (soTien * 23000) + "VNĐ";
+        } else if (tien1 == tien2) {
+            ketQua = "Giá trị :" + soTien;
+        }
+        document.getElementById("giatri").innerHTML = ketQua;
 
-}
+    }
 </script>

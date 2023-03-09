@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch cá sè</title>
+</head>
+<body>
+<div>
+    <table>
+        <td><input id="nhapso1" type="number"></td>
+        <td>
+            <button id="nhanvao1" onclick="bamvao()">Tính số ngày</button>
+        </td>
+    </table>
+</div>
+<div>
+    <p>
+    <h3 id="ketqua1">Kết quả </h3> </p>
+</div>
+<div>
+    <p>Và</p>
+</div>
+<table>
+    <td><input id="nhapso2" type="number"></td>
+    <td>
+        <button id="nhanvao2" onclick="bamvao()"> Tính số ngày</button>
+    </td>
+</table>
+<div>
+    <p>
+    <h3 id="ketqua2">Kết quả</h3></p>
+</div>
+
+</body>
+</html>
+<script>
+    function bamvao() {
+        let lanDau = document.getElementById("nhapso1").value * 1;
+        let lanSau = document.getElementById("nhapso2").value * 1;
+        switch (lanDau) {
+            case 1:
+                document.getElementById("ketqua1").innerText = "tháng 1 có 31 ngày";
+                break;
+            case 3:
+                document.getElementById("ketqua1").innerText = ("tháng 3 có 31 ngày");
+                break;
+            case 5:
+                document.getElementById("ketqua1").innerText = ("tháng 5 có 31 ngày");
+                break;
+            case 7:
+                document.getElementById("ketqua1").innerText = ("tháng 7 có 31 ngày");
+                break;
+            case 8:
+                document.getElementById("ketqua1").innerText = ("tháng 8 có 31 ngày");
+                break;
+            case 10:
+                document.getElementById("ketqua1").innerText = ("tháng 10 có 31 ngày");
+                break;
+            case 12:
+                document.getElementById("ketqua1").innerText = ("tháng 12 có 31 ngày");
+                break;
+            case 4:
+                document.getElementById("ketqua1").innerText = "tháng 4 có 30 ngày";
+            case 6:
+                document.getElementById("ketqua1").innerText = "tháng 6 có 30 ngày";
+            case 9:
+                document.getElementById("ketqua1").innerText = "tháng 9 có 30 ngày";
+            case 11:
+                document.getElementById("ketqua1").innerText = "tháng 11 có 30 ngày";
+                break;
+            case 2:
+                document.getElementById("ketqua1").innerText = "tháng 2 có 28 hoặc 29 ngày";
+                break;
+            default :
+                document.getElementById("ketqua1").innerText = "nhập lại đi má"
+                break;
+        }
+        switch (lanSau) {
+            case 1:
+                document.getElementById("ketqua2").innerText = "tháng 1 có 31 ngày";
+                break;
+            case 3:
+                document.getElementById("ketqua2").innerText = ("tháng 3 có 31 ngày");
+                break;
+            case 5:
+                document.getElementById("ketqua2").innerText = ("tháng 5 có 31 ngày");
+                break;
+            case 7:
+                document.getElementById("ketqua2").innerText = ("tháng 7 có 31 ngày");
+                break;
+            case 8:
+                document.getElementById("ketqua2").innerText = ("tháng 8 có 31 ngày");
+                break;
+            case 10:
+                document.getElementById("ketqua2").innerText = ("tháng 10 có 31 ngày");
+                break;
+            case 12:
+                document.getElementById("ketqua2").innerText = ("tháng 12 có 31 ngày");
+                break;
+            case 4:
+                document.getElementById("ketqua2").innerText = "tháng 4 có 30 ngày";
+            case 6:
+                document.getElementById("ketqua2").innerText = "tháng 6 có 30 ngày";
+            case 9:
+                document.getElementById("ketqua2").innerText = "tháng 9 có 30 ngày";
+            case 11:
+                document.getElementById("ketqua2").innerText = "tháng 11 có 30 ngày";
+                break;
+            case 2:
+                document.getElementById("ketqua2").innerText = "tháng 2 có 28 hoặc 29 ngày";
+                break;
+            default :
+                document.getElementById("ketqua2").innerText = "nhập vô luôn"
+        }
+    }
+</script>
