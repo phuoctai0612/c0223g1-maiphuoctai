@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><h4>Giá bán lẻ sinh hoạt 2023</h4></th>
+    </tr>
+    <tr>
+        <th><input type="text" id="nhapdien" placeholder="Số điện dùng trong tuần"></th>
+        <th>
+            <button onclick="tinhTien()">Tính tiền</button>
+        </th>
+    </tr>
+</table>
+<div>
+    <p>Tổng tiền điện đã sử dụng trong tuần</p>
+</div>
+<div>
+    <h2 id="tongtien">Xiền phải trả</h2>
+</div>
+
+</body>
+</html>
+<script>
+    function tinhTien() {
+        let soDien = document.getElementById("nhapdien").value*1;
+        let tongTien = document.getElementById("tongtien");
+        if (soDien > 0 && soDien < 50) {
+            tongTien.innerText  = (soDien * 1.678 + "Nghìn Đồng");
+        } else if (soDien < 100 && soDien > 51) {
+            tongTien.innerText = (soDien * 1.734 + "Nghìn Đồng");
+        } else if (soDien < 200 && soDien > 101) {
+            tongTien.innerText = (soDien * 2.014 +"Nghìn Đồng");
+        } else if (soDien > 201 && soDien < 300) {
+            tongTien.innerText = (soDien * 2.536+"Nghìn Đồng");
+        } else if (soDien<400 && soDien>301){
+            tongTien.innerText =(soDien*2.837 +"Nghìn Đồng");
+        } else {
+            tongTien.innerText =(soDien*2.927+"Nghìn Đồng")
+        }
+    }
+</script>
