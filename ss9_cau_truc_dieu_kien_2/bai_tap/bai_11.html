@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Thu nhập của bạn trong 1 tháng</td>
+    </tr>
+    <tr>
+        <th><input id="luongthang" type="text" placeholder="Tổng lương trong tháng"/></th>
+    </tr>
+</table>
+<br>
+<button onclick="tinhThue()">Tính Thuế</button>
+<p>Trong tháng :</p>
+<h3 id="tienthang" style="color: darkred">Số tiền trong tháng trả cho nhà nước</h3>
+<br>
+<p>Trong Năm :</p>
+<h3 id="tiennam" style="color: darkred">Số tiền trong năm trả cho nhà nước</h3>
+
+</body>
+</html>
+<script>
+    function tinhThue() {
+        let luongThang = document.getElementById("luongthang").value * 1;
+        let luongNam = (luongThang * 12);
+        let tongThue = document.getElementById("tienthang");
+        let tongThueNam = document.getElementById("tiennam");
+        if (luongThang <= 5) {
+            tongThue.innerText = (luongThang * 0.05+"Triệu");
+            tongThueNam.innerText = (luongNam * 5 / 100 +"Triệu");
+        } else if (luongThang > 6 && luongThang < 10) {
+            tongThue.innerText = (luongThang * 10 / 100+"Triệu");
+            tongThueNam.innerText = (luongNam * 10 / 100+"Triệu");
+        } else if (luongThang > 11 && luongThang < 20) {
+            tongThue.innerText = (luongThang * 15 / 100+"Triệu");
+            tongThueNam.innerText = (luongNam * 15 / 100+"Triệu");
+        } else if (luongThang > 21 && luongThang < 30) {
+            tongThue.innerText = (luongThang * 20 / 100+"Triệu");
+            tongThueNam.innerText = (luongNam * 20 / 100+"Triệu");
+        } else if (luongThang > 31 && luongThang < 50) {
+            tongThue.innerText = (luongThang * 25 / 100+"Triệu");
+            tongThueNam.innerText = (luongNam * 25 / 100+"Triệu");
+        } else {
+            tongThue.innerText = "lương cao quá tự tính";
+            tongThueNam.innerText = "lương cao quá tự tính";
+        }
+
+    }
+</script>

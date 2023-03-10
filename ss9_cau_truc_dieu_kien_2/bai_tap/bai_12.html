@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td> Số tiền gửi ( Triệu Đồng)</td>
+        <td>
+            <input id="tiengui" type="text" placeholder="Số tiền cần gửi">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Số năm gửi
+        </td>
+        <td>
+            <input id="namgui" type="text" placeholder="Số năm gửi">
+        </td>
+    </tr>
+</table>
+<button onclick="tinhLai()">Tính lãi</button>
+<h3>Tổng lãi của bạn :</h3>
+<p id="solai" style="color: darkblue">Kết quả lãi</p>
+
+</body>
+</html>
+<script>
+    function tinhLai() {
+        let tienGui = document.getElementById("tiengui").value * 1;
+        let namGui = document.getElementById("namgui").value * 1;
+        let soLai = document.getElementById("solai");
+        if (tienGui < 100 && namGui < 5) {
+            soLai.innerText = tienGui * namGui * 4/ 100;
+        } else if (tienGui > 101 && namGui > 5) {
+            soLai.innerText = tienGui * namGui *7 / 100;
+        } else {
+            soLai.innerText = "aa"
+        }
+    }
+</script>
