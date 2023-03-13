@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="nhapso"></p>
+<p id="sokhac"></p>
+</body>
+</html>
+<script>
+    let tong=''*1;
+  let fn=''*1;
+  let fn1=1;
+  let fn2=1;
+  console.log(fn1);
+  console.log(fn2);
+  for (let i=1;i<19;i++){
+      fn=fn1+fn2;
+      fn1=fn2;
+      fn2=fn;
+      console.log(fn2)
+      document.getElementById("nhapso").innerText= tong+=fn;
+  }
+  alert(tong+2+"là tổng tất cả")
+</script>

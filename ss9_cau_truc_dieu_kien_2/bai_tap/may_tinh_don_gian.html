@@ -6,73 +6,88 @@
 </head>
 <body>
 <fieldset style="width: 150px">
-<table width="150px" height="200px">
-    <tr>
-        <td colspan="4"><input type="text" id="nhapvao"></td>
-        <td rowspan="4"></td>
-    </tr>
-    <tr align="center">
-        <td >
-            <button id="so1" onclick="so11">1</button>
-        </td>
-        <td>
-            <button id="so2" onclick="so22">2</button>
-        </td>
-        <td>
-            <button id="so3" onclick="so33">3</button>
-        </td>
-        <td>
-            <button id="cong" onclick="cong1">+</button>
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            <button id="so4">4</button>
-        </td>
-        <td>
-            <button id="so5">5</button>
-        </td>
-        <td>
-            <button id="so6">6</button>
-        </td>
-        <td>
-            <button id="tru">-</button>
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            <button id="so7">7</button>
-        </td>
-        <td>
-            <button id="so8">8</button>
-        </td>
-        <td>
-            <button id="so9">9</button>
-        </td>
-        <td>
-            <button id="nhan">x</button>
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            <button id="ce">C</button>
-        </td>
-        <td>
-            <button id="so0">0</button>
-        </td>
-        <td>
-            <button id="bang">=</button>
-        </td>
-        <td>
-            <button id="chia">/</button>
-        </td>
-    </tr>
+    <table width="170px" height="200px">
+        <tr>
+            <td colspan="4"><input type="text" id="nhapvao"></td>
+            <td rowspan="4"></td>
+        </tr>
+        <tr align="center">
+            <td>
+                <button id="so1" onclick="mayTinh(1)">1</button>
+            </td>
+            <td>
+                <button id="so2" onclick="mayTinh(2)">2</button>
+            </td>
+            <td>
+                <button id="so3" onclick="mayTinh(3)">3</button>
+            </td>
+            <td>
+                <input type="button" value="+" onclick="mayTinh('+')"></td>
+        </tr>
+        <tr align="center">
+            <td>
+                <button id="so4" onclick="mayTinh(4)">4</button>
+            </td>
+            <td>
+                <button id="so5" onclick="mayTinh(5)">5</button>
+            </td>
+            <td>
+                <button id="so6" onclick="mayTinh(6)">6</button>
+            </td>
+            <td>
 
-</table>
+                <input type="button" value="-" onclick="mayTinh('-')">
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <button id="so7" onclick="mayTinh(7)">7</button>
+            </td>
+            <td>
+                <button id="so8" onclick="mayTinh(8)">8</button>
+            </td>
+            <td>
+                <button id="so9" onclick="mayTinh(9)">9</button>
+            </td>
+            <td>
+                <input id="nhan" onclick="mayTinh('*')" value="*" type="button">
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <button id="ce" onclick="xoaHet()">C</button>
+            </td>
+            <td>
+                <button id="so0" onclick="mayTinh(0)">0</button>
+            </td>
+            <td>
+                <input type="button" value="=" onclick="phepBang()">
+            </td>
+            <td>
+                <input id="chia" onclick="mayTinh('/')" value="/" type="button">
+            </td>
+        </tr>
+
+    </table>
 </fieldset>
 
 </body>
 </html>
 <script>
+    let nhapSo = document.getElementById("nhapvao");
+
+    function mayTinh(value) {
+        nhapSo.value += value;
+    }
+
+    function phepBang() {
+        let phepBang = eval(nhapSo.value);
+        nhapSo.value = phepBang;
+    }
+
+    function xoaHet() {
+        nhapSo.value = "";
+    }
+
 
 </script>

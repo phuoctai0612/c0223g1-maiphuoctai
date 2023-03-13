@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let numbers = prompt("nhập số lượng các số nguyên tố cần in ra")*1;
+    let cout = 0;
+    let N = 2;
+    while (cout < numbers) {
+        let dieuKien = true;
+        for (let i = 2; i < N; i++) {
+            if (N % i == 0) {
+                dieuKien = false;
+                break;
+            }
+        }
+        if (dieuKien) {
+            console.log(N + "là số nguyên tố")
+            cout++;
+        }
+        N++;
+    }
+    // let count = 0;
+    // let number = 2;
+    // while (count < 30) {
+    //     let isPrime = true;
+    //     for (let i = 2; i < number; i++) {
+    //         if (number % i == 0) {
+    //             isPrime = false;
+    //             break;
+    //         }
+    //     }
+    //     if(isPrime) {
+    //         console.log(number+ "là số nguyên tố")
+    //         count++;
+    //     }
+    //     number++;
+    // }
+</script>
