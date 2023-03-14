@@ -9,18 +9,18 @@
 </body>
 </html>
 <script>
-    let tong=''*1;
-    let fn=''*1;
-    let fn1=1;
-    let fn2=1;
+    let tong = '' * 1;
+    let fn = '' * 1;
+    let fn1 = 1;
+    let fn2 = 1;
     console.log(fn1);
     console.log(fn2);
-    for (let i=1;i<21;i++){
-        fn=fn1+fn2;
-        fn1=fn2;
-        fn2=fn;
+    for (let i = 1; i < 21; i++) {
+        fn = fn1 + fn2;
+        fn1 = fn2;
+        fn2 = fn;
         console.log(fn2);
-        if (fn%5==0){
+        if (fn % 5 == 0) {
             document.getElementById("chuabien").innerText = fn;
             break;
         }

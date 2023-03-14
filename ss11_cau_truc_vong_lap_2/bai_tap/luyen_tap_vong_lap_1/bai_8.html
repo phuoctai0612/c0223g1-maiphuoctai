@@ -6,23 +6,23 @@
 </head>
 <body>
 <div>
-<button id="choigame" onclick="nhanvao()"> Chơi game </button>
+    <button id="choigame" onclick="nhanvao()"> Chơi game</button>
 </div>
 </div>
 </body>
 </html>
 <script>
     function nhanvao() {
-        let soHoc = parseInt(prompt("nhập số lượng bạn muốn dự đoán")*1);
-        let nhapSo = Math.floor(Math.random()*soHoc);
+        let soHoc = parseInt(prompt("nhập số lượng bạn muốn dự đoán") * 1);
+        let nhapSo = Math.floor(Math.random() * soHoc);
         console.log(nhapSo);
-        for (let i=0;i<3;i++){
+        for (let i = 0; i < 3; i++) {
             let moiNhap = parseInt(prompt("mời bạn dự đoán số chính xác"));
-            if (moiNhap>nhapSo){
+            if (moiNhap > nhapSo) {
                 alert("số lớn hơn rồi");
-            } else if (moiNhap<nhapSo){
+            } else if (moiNhap < nhapSo) {
                 alert("số nhỏ r cha");
-            }else {
+            } else {
                 alert("chính xác vãi ò");
                 break;
             }
