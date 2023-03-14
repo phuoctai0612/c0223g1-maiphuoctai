@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="baitap"></p>
+</body>
+</html>
+<script>
+    let bienMoi='';
+    for (let i = 0; i <=5; i++) {
+        for (let j = 0; j <= i; j++) {
+            bienMoi +="*";
+        }
+       bienMoi+= '<br>'
+    } document.getElementById("baitap").innerHTML= bienMoi;
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 1; i >= j; j++) {
+            bienMoi += "*";
+        }
+        bienMoi += '<br>'
+    }
+    document.getElementById("baitap").innerHTML = bienMoi;
+
+
+
+
+</script>
