@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>
+        <h3>Sample Screen:</h3>
+    </td>
+  </tr>
+    <tr>
+        <td> <input type="text" placeholder="Để trưng thôi đừng nhập"></td>
+        <td> <button onclick="nhanvao()" id="play">Add</button>  </td>
+        <td> <button onclick="nhanvao()" id="reset">Reset</button> </td>
+    </tr>
+    <div>
+        <p id="dulieu"></p>
+    </div>
+</table>
+</body>
+</html>
+<script>
+    function nhanvao(){
+        let element = [23,12,25];
+        let ganBien='';
+        for (let i=0;i<element.length;i++){
+            ganBien+=element[i]+"<br>"
+            document.getElementById("dulieu").innerHTML= ("Element" + i + "="+ ganBien);
+        }
+    }
+</script>
