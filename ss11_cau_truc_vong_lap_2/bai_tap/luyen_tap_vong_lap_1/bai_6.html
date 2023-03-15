@@ -8,15 +8,14 @@
 </body>
 </html>
 <script>
-    let soMot = 7;
-    for (let i = 1; i <= 30; i++) {
-        if (!(soMot % 7 == 0)) {
-            break;
-        } else if (soMot % 7 == 0) {
-            console.log(soMot);
-            soMot += 7;
-        } else {
-            break;
-        }
-    }
+   let motSo=0;
+   let count=0;
+   let ganSo='';
+   while (count<31){
+       if (motSo%7==0){
+           ganSo+=motSo+"<br>";
+           count++;
+       }
+       motSo++;
+   }document.write("các số chia hết cho 7 :"+ganSo)
 </script>
