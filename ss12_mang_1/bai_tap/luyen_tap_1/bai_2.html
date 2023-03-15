@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let taoMang = [2,13,32,4,67,85,453,753,45,423];
+    let max = taoMang[0];
+    let index=0;
+    for (let i=1;i<taoMang.length;i++){
+        if (taoMang[i]>max){
+            max=taoMang[i];
+            index=i;
+        }
+    }
+    document.write("số lớn nhất là"+ "&nbsp"+max + "&nbsp"+"và thứ tự trong mảng là :"+"&nbsp"+index );
+</script>

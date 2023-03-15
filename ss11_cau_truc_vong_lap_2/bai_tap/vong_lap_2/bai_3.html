@@ -23,22 +23,22 @@
         bienMoi += '<br>';
     }
     document.getElementById("baitap").innerHTML = bienMoi;
-    let i ,j,k;
-    for ( i = 0; i <= 4; i++) {
-        for ( k = 3; k >= i; k--) {
+
+    for ( let i = 0; i <= 4; i++) {
+        for ( let k = 3; k >= i; k--) {
             bienMoi += '&nbsp;&nbsp;';
         }
-        for ( j = 0; j <= i; j++) {
+        for ( let j = 0; j <= i; j++) {
             bienMoi += "*";
         }
         bienMoi += '<br>';
     }
     document.getElementById("baitap").innerHTML = bienMoi;
-    for ( i = 4; i >= 0; i--) {
-        for ( k=3;k>=i;k--){
+    for ( let i = 4; i >= 0; i--) {
+        for ( let k=3;k>=i;k--){
             bienMoi+='&nbsp;&nbsp;';
         }
-        for ( j=0;j<=i;j++){
+        for (let j=0;j<=i;j++){
             bienMoi+="*";
         }
         bienMoi+='<br>';

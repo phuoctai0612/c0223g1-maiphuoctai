@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let taoMang = [23, 13, 5336, 567, 45, 7765, 75, 434, 746, 353];
+    let hopRong = 0;
+    for (let i = 0; i < taoMang.length; i++) {
+        for (let j=i+1;j<taoMang.length;j++){
+            if (taoMang[i]<taoMang[j]){
+                hopRong=taoMang[j];
+               taoMang[j]=taoMang[i];
+                taoMang[i]=hopRong;
+            }
+        }
+    }
+    console.log(taoMang)
+</script>

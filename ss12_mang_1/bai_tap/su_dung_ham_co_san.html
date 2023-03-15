@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // let myColor = ["Red", "Green", "White", "Black"];
+    //     document.write(myColor);
+
+
+
+
+
+
+    // let nhapSo = prompt("nhập số");
+    // for (let i = 0; i < nhapSo.length; i++) {
+    //     if (nhapSo[i] % 2 == 0 && nhapSo[i] != 0) {
+    //         document.write("-" + nhapSo[i]);
+    //     } else {
+    //         document.write(nhapSo[i]);
+    //     }
+    // }
+
+
+
+    let kiemTra='';
+    let nhapSo = prompt("nhập chữ");
+    for (let i=0;i<nhapSo.length;i++){
+       if (nhapSo[i]>="a" && nhapSo[i]<="z"){
+           kiemTra+=nhapSo[i].toUpperCase();
+       }else {
+           kiemTra+=nhapSo[i].toLowerCase();
+       }
+    }
+    document.write(kiemTra);
+</script>

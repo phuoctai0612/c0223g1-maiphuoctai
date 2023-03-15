@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapvao" placeholder="Nhập từ cần dịch sang">
+<button onclick="bamvao()">Dịch</button>
+<p id="hienra">Từ đó nghĩa là</p>
+</body>
+</html>
+<script>
+    function bamvao() {
+        let duaBien = document.getElementById("nhapvao").value;
+        let tiengAnh = ["banana", "apple", "lemon"]
+        let tiengViet = ["chuối", "táo", "chanh"]
+        let index = 0;
+        let ketQua = '';
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (duaBien == tiengAnh[i]) {
+                index = i;
+                for (let j = 0; j < tiengViet.length; j++) {
+                    if (index == j) {
+                        ketQua = tiengViet[j];
+                    }
+                }
+            }
+        }
+        document.getElementById('hienra').innerText = ketQua;
+    }
+</script>
