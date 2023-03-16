@@ -9,16 +9,30 @@
 </body>
 </html>
 <script>
-    let taoMang = [123, 34, 645, 865, 'V', 9876, 65, 87, 65, 76];
+    // let taoMang = [1,2,3,4,5,6,7,8,9,10];
+    // let v=prompt("nhập số");
+    // let last = taoMang.length - 1;
+    // let hopRong = 0;
+    // for (let i = 0; i < taoMang.length; i++) {
+    //     if (taoMang[i] == v) {
+    //         hopRong = taoMang[i + 1];
+    //         taoMang[i + 1] = v;
+    //         taoMang[i] = hopRong;
+    //     }
+    //     if (taoMang[last] == v) {
+    //         taoMang[last] = 0;
+    //     }
+    // }
+    // document.write(taoMang);
+    let taoMang = [1, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let v = prompt("nhập số");
     let last = taoMang.length - 1;
-    let hopRong = 0;
     for (let i = 0; i < taoMang.length; i++) {
-        if (taoMang[i] == 'V') {
-            hopRong = taoMang[i + 1];
-            taoMang[i + 1] = 'V';
-            taoMang[i] = hopRong;
-        }
-        if (taoMang[last] == 'V') {
+        if (v == taoMang[i]) {
+            for (let j = i; j < taoMang.length - 1; j++) {
+                taoMang[j] = taoMang[j + 1];
+            }
+            i--;
             taoMang[last] = 0;
         }
     }
