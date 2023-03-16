@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = prompt("nhập mật khẩu của bạn");
+    let b = prompt("nhập lại mật khẩu để xác nhận");
+    let hienPass = '';
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] == b[i]) {
+            hienPass += a[i];
+        } else {
+            a = prompt("nhập mật khẩu của bạn");
+            b = prompt("nhập lại mật khẩu để xác nhận");
+            --i;
+        }
+    }
+    document.write("có phải mật khẩu của bạn là" + "&nbsp;" + hienPass)
+</script>

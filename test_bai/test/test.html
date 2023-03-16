@@ -8,19 +8,23 @@
     </style>
 </head>
  <body>
+ <p>
+     <label>Fahrenheit</label>
+     <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+            oninput="temperatureConverter(this.value)"
+            onchange="temperatureConverter(this.value)">
+ </p>
+ <p>Celsius: <span id="outputCelsius"></span></p>
  <p id="baitap"></p>
  </body>
 </html>
 <script>
-    let bienMoi='';
-    for ( let i = 0; i <= 4; i++) {
-        for ( let k = 3; k >= i; k--) {
-            bienMoi += '&nbsp;&nbsp;';
-        }
-        for ( let j = 0; j <= i; j++) {
-            bienMoi += "*";
-        }
-        bienMoi += '<br>';
+    type="text/javascript">
+        function myFunction() {
+        let firstArg = arguments[0];
+        let secondArg = arguments[1];
+        alert("firstArg is: " + firstArg);
+        alert("secondArg is: " + secondArg);
     }
-    document.getElementById("baitap").innerHTML = bienMoi;
+        myFunction("hello","world");
 </script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let taoMang = prompt("nhập zô");
+    let i = 0;
+    let hopRong='';
+    while (i<taoMang.length){
+        if (taoMang[i]=='-'){
+            hopRong+='_';
+        }else {
+            hopRong+=taoMang[i];
+        }
+        i++;
+    }
+    document.write(hopRong)
+</script>
