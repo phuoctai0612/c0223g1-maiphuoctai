@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function daoHam(b) {
+        let hopRong = '';
+        let last = b.length - 1;
+        for (let i = 0; i < b.length / 2; i++) {
+            hopRong = b[i];
+            b[i] = b[last];
+            b[last] = hopRong;
+            last--
+            // a.reverse();
+        }
+    }
+    let m = [2, 3, 4, 5];
+  daoHam(m);
+  alert(m);
+
+</script>

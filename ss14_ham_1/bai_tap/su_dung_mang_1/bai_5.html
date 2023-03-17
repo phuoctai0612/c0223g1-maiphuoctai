@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let flag=true;
+    function lookingForStar() {
+        let timSao = prompt("bạn muốn tìm sao lào");
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if (timSao == ngoiSao[i]) {
+                alert(chomSao[i]);
+                flag=false;
+                break;
+            }
+        }
+        if (flag) {
+            alert("k có");
+        }
+    }
+    lookingForStar();
+</script>

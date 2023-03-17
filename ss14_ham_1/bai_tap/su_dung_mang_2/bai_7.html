@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    function nhapSo(a, b) {
+        let hopRong = a[0];
+        a[0] = b[0];
+        b[0] = hopRong;
+    }
+    let c =[];
+    let d =[];
+    c[0] = prompt("nhập số");
+    d[0] = prompt("nhập số");
+    nhapSo(c,d);
+    alert(c);
+    alert(d);
+
+</script>
