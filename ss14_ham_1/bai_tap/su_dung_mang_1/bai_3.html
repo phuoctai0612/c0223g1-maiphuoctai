@@ -9,12 +9,19 @@
 </body>
 </html>
 <script>
-    function taoHam(a,b){
-        if (a>b){
+    function taoHam(a, b) {
+        let flag = true;
+        if (a > b) {
+            flag = false;
+        }
+        if (flag) {
+            return a + b;
+        } else {
             alert("a lớn hơn b là dở r");
-        }else {
-            return a+b;
         }
     }
-    alert(taoHam(2,3));
+
+    let c = prompt("nhap so dau tien") * 1;
+    let d = prompt("nhap so thu 2") * 1;
+    document.write(taoHam(c, d));
 </script>

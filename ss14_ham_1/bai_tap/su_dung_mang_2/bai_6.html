@@ -9,18 +9,19 @@
 </body>
 </html>
 <script>
-  let a = prompt("nhập đại");
-  function soNguyen(){
+  function soNguyen(a){
       let flag = true;
       if (a>0){
           flag=false;
       }
-      return flag;
+      if (flag){
+          alert("đây k phải là số nguyên");
+      }else {
+          alert("đây là số nguyên");
+      }
   }
+  let a = prompt("nhập đại");
+  soNguyen(a);
 
-  if (soNguyen()){
-      alert("đây k phải là số nguyên")
-  }else {
-      alert("đây là số nguyên")
-  }
+
 </script>

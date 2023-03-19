@@ -9,21 +9,22 @@
 </body>
 </html>
 <script>
-    function timSo() {
-        let a = [3, 4, 6, "s", "h", "a", 9, 5, 5, 5, 5, 5];
+    function timSo(b) {
+        let a = [3, 4, 6, "s", "h", "a", 9, 5, 5, 5, "a", "h", "l", "h", "e", 5, 5, 5, 6, 5];
         let count = 0;
+        flag = true;
         for (let i = 0; i < a.length; i++) {
             if (b == a[i]) {
                 count++;
+                flag=false;
             }
-            if (count == 0) {
-                count =-1;
-                break;
+            if(flag){
+                count=-1;
             }
         }
         return count;
     }
-    let b = prompt("đố anh bắt đc thứ gì có trong mảng");
-   timSo(b);
-    alert(b);
+
+    let b = prompt("thứ gì có trong mảng");
+    alert(timSo(b));
 </script>

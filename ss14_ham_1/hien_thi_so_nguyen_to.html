@@ -9,25 +9,24 @@
 </body>
 </html>
 <script>
-    function isPrime(number) {
+    function isPrime(a) {
         let flag = false;
-        if (number == 0) {
-            alert(number + " không là số nguyên tố")
+        if (a == 0) {
+            alert(a + " không là số nguyên tố");
         } else {
-            for (let i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i == 0) {
-                    flag = true
+            for (let i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i == 0) {
+                    flag = true;
                     break;
                 }
             }
             if (flag) {
-                alert(number + 'không phải là số nguyên tố')
+                alert(a + "&nbsp" + 'không phải là số nguyên tố');
             } else {
-                alert(number + 'là số nguyên tố')
+                alert(a + "&nbsp" + 'là số nguyên tố');
             }
         }
     }
-
     let number = parseInt(prompt("Nhập số "));
     isPrime(number)
 </script>
