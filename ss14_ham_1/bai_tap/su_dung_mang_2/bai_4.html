@@ -10,19 +10,19 @@
 </html>
 <script>
 
-    function timSo() {
-        let result=true;
-        let nhapSo = prompt("nhập tùm lum từa lưa");
-         if (nhapSo*1 % nhapSo*1 === 0){
-             result=true;
-         }else {
-             result=false;
-         }
-        if (result){
+    function timSo(nhapSo) {
+        let result = true;
+        if (nhapSo * 1 % nhapSo * 1 === 0 || nhapSo == 0) {
+            result = true;
+        } else {
+            result = false;
+        }
+        if (result) {
             alert("true");
-        }else {
+        } else {
             alert("false");
         }
     }
-    timSo()
+    let nhapSo = prompt("nhập tùm lum từa lưa");
+    timSo(nhapSo);
 </script>

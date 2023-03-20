@@ -9,21 +9,23 @@
 </body>
 </html>
 <script>
-    function lookingForStar() {
-        let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
-        let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
-        let flag=true;
-        let timSao = prompt("bạn muốn tìm sao lào");
+    let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function lookingForStar(stars) {
+        let flag = true;
+        let starUniver ='';
         for (let i = 0; i < ngoiSao.length; i++) {
-            if (timSao == ngoiSao[i]) {
-                alert(chomSao[i]);
-                flag=false;
-                break;
+            if (stars == ngoiSao[i]) {
+                starUniver = chomSao[i];
+                flag = false;
             }
         }
-        if (flag) {
-            alert("k có");
+        if (flag){
+            alert("không có");
+        }else {
+            alert(starUniver);
         }
     }
-    lookingForStar();
+let star = prompt("nhập chòm sao bạn muốn tìm");
+   lookingForStar(star);
 </script>

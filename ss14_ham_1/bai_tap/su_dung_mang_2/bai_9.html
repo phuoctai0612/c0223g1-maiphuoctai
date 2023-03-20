@@ -16,11 +16,11 @@
         for (let i = 0; i < a.length; i++) {
             if (b == a[i]) {
                 count++;
-                flag=false;
+                flag = false;
             }
-            if(flag){
-                count=-1;
-            }
+        }
+        if (flag) {
+            count = -1;
         }
         return count;
     }

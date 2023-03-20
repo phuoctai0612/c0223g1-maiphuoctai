@@ -5,147 +5,183 @@
     <title>Title</title>
     <STYLE>
         td {
-            width: 130px;
+            width: 200px;
+            background: #f1eeee;
+            height: 35px;
         }
 
         th {
             width: 200px;
         }
+        fieldset{
+            background: #f1eeee;
+        }
+        button{
+            height: 30px;
+            width: 50px;
+        }
     </STYLE>
 </head>
 <body>
-<h2>Add New Product</h2>
-<fieldset style="width: 250px">
-    <table>
-        <tr>
-            <td><input type="text" id="nhapvao" placeholder="New Product"></td>
-            <td>
-                <button id="themvao" style="background: #6fe26f">Add</button>
-            </td>
-        </tr>
-    </table>
-</fieldset>
-<h2>Display All Product</h2>
-<table>
-    <tr>
-        <th align="left">Product Name</th>
-        <td></td>
-        <th style="color: darkred" align="right">9 products</th>
-    </tr>
-    <tr>
-        <td>Sony Xperia</td>
-        <td align="center">
-            <button onclick="clickEdit" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-    <tr style="background: #e0dcdc">
-        <td>Samsung Galaxy</td>
-        <td align="center">
-            <button onclick="clickEdit1" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete1" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Nokia 6</td>
-        <td align="center">
-            <button onclick="clickEdit2" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete2" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-    <tr style="background: #e0dcdc">
-        <td>Xiaomi Redmi Note 4</td>
-        <td align="center">
-            <button onclick="clickEdit3" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete3" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Apple iphone 6S</td>
-        <td align="center">
-            <button onclick="clickEdit4" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete4" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-    <tr style="background: #e0dcdc">
-        <td>Xiaomi 5s Plus</td>
-        <td align="center">
-            <button onclick="clickEdit5" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete5" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Apple iphone 8 Plus</td>
-        <td align="center">
-            <button onclick="clickEdit6" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete6" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-    <tr style="background: #e0dcdc">
-        <td>Fujitsu F-04E</td>
-        <td align="center">
-            <button onclick="clickEdit7" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete7" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Oppo A71</td>
-        <td align="center">
-            <button onclick="clickEdit8" style="background: #6fe26f">Edit</button>
-        </td>
-        <td align="center">
-            <button onclick="clickDelete8" style="background: #6fe26f">Delete</button>
-        </td>
-    </tr>
-
-</table>
+<p id="taobanglon"></p>
+<p id="taobangnho"></p>
+<!--<button onclick="taoBang()"></button>-->
+<!--<button ></button>-->
+<!--<h2>Add New Product</h2>-->
+<!--<fieldset style="width: 250px">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td><input type="text" id="nhapvao" placeholder="New Product"></td>-->
+<!--            <td>-->
+<!--                <button id="themvao" style="background: #6fe26f" onclick="taoBangDau()">Add</button>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</fieldset>-->
+<!--<h2>Display All Product</h2>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th align="left">Product Name</th>-->
+<!--        <td></td>-->
+<!--        <th style="color: darkred" align="right">9 products</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Sony Xperia</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr style="background: #e0dcdc">-->
+<!--        <td>Samsung Galaxy</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit1" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete1" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Nokia 6</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit2" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete2" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr style="background: #e0dcdc">-->
+<!--        <td>Xiaomi Redmi Note 4</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit3" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete3" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Apple iphone 6S</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit4" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete4" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr style="background: #e0dcdc">-->
+<!--        <td>Xiaomi 5s Plus</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit5" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete5" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Apple iphone 8 Plus</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit6" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete6" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr style="background: #e0dcdc">-->
+<!--        <td>Fujitsu F-04E</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit7" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete7" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Oppo A71</td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickEdit8" style="background: #6fe26f">Edit</button>-->
+<!--        </td>-->
+<!--        <td align="center">-->
+<!--            <button onclick="clickDelete8" style="background: #6fe26f">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
 </body>
 </html>
 <script>
-    // let sanPham = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4",
-    //     "Apple iphone 6S", "Xiaomi 5s Plus", "Apple iphone 8 Plus",
-    //     "Fujitsu F-04E", "Oppo A71"];
-    // let a = "<table>";
-    // for (let i = 0; i < 10; i++) {
-    //     a = a + "<tr>";
-    //     for (let j = 0; j < 1; j++) {
-    //         a[j] += "<td>" + i + "</td>";
-    //         for (let k = 0; k < 1; k++) {
-    //             a += "<td align='center'>"+ "<button onclick=\"clickEdit8\" style=\"background: #6fe26f\">Edit</button>\n" + "</td>";
-    //             for (let l = 0; l <1 ; l++) {
-    //                 a += "<td align='center'>" + "<button onclick=\"clickDelete8\" style=\"background: #6fe26f\">Delete</button>" + "</td>";
-    //             }
-    //         }
-    //     }
-    //     a += "</tr>";
-    // }
-    // a = a + "</table >";
-    // document.write(a)
-    // let sout ,i ,j;
-    // sout = "<table border='1' width='860' cellspacing='1' cellpadding='0'>"
-    // for (i = 1; i < 10; i++) {
-    //     sout = sout + "<tr>";
-    //     for (j = 2; j < 10; j++) {
-    //         sout = sout + "<td>" + j+'x'+i+'='+ i * j + "</td>";
-    //     }
-    //     sout = sout + "</tr>";
-    // }
-    // sout = sout + "</table>";
-    // document.write(sout);
+    let sanPham = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4",
+        "Apple iphone 6S", "Xiaomi 5s Plus", "Apple iphone 8 Plus",
+        "Fujitsu F-04E", "Oppo A71"];
+  function taoBang() {
+      let r="<h2>Add New Product</h2>\n" +
+          "<fieldset style=\"width: 250px\">\n" +
+          "    <table>\n" +
+          "        <tr>\n" +
+          "            <th><input type=\"text\" id=\"nhapvao\" placeholder=\"New Product\"></th>\n" +
+          "            <th>\n" +
+          "                <button id=\"themvao\" style=\"background: #6fe26f\" onclick=\"taoBangDau()\">Add</button>\n" +
+          "            </th>\n" +
+          "        </tr>\n" +
+          "    </table>\n" +
+          "</fieldset>"+
+          "<h2>Display All Product</h2>"+"    " +"<table>"+
+          "<tr>\n" +
+          "        <th align=\"left\">Product Name</th>\n" +
+          "        <th></th>\n" +
+          "        <th style=\"color: darkred\" align=\"right\">9 products</th>\n" +
+          "    </tr>" +"</table>"
+      let bangNho = '';
+      let a="<table>";
+      for (let i = 0; i < sanPham.length; i++) {
+          bangNho += a+"<tr>\n" +
+              '        <td>' + sanPham[i] + '</td>\n' +
+              "        <td align=\"center\">\n" +
+              "            <button style=\"background: #6fe26f\" onclick='edit("+ i +")'>Edit</button>\n" +
+              "        </td>\n" +
+              "        <td align=\"center\">\n" +
+              "            <button style=\"background: #6fe26f\" onclick='deLeTe("+i+")'>Delete</button>\n" +
+              "        </td>\n" +
+              "    </tr>"
+      }
+      a+="</table>"
+      document.getElementById("taobanglon").innerHTML = r;
+      document.getElementById("taobangnho").innerHTML = bangNho;
+
+  }
+  taoBang();
+  function taoBangDau() {
+     a= document.getElementById("nhapvao").value
+      sanPham.push(a);
+      taoBang();
+  }
+  function edit(index){
+      let a=prompt("nhập vào");
+      sanPham[index] = a;
+      taoBang();
+  }
+  function deLeTe(index) {
+      sanPham.splice(index,1);
+      taoBang();
+    }
 </script>

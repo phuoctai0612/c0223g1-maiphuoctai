@@ -17,11 +17,17 @@
             b[i] = b[last];
             b[last] = hopRong;
             last--;
-            // a.reverse();
+            // b.reverse();
         }
+        return b;
     }
-    let m = [2, 3, 4, 5];
-  daoHam(m);
-  alert(m);
+
+    function taoMang() {
+        let m = [2, 3, 4, 5];
+        return m;
+    }
+
+    let a = daoHam(taoMang());
+    alert(a);
 
 </script>

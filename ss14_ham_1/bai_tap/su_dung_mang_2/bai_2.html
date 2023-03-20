@@ -9,11 +9,18 @@
 </body>
 </html>
 <script>
-    function hinhTron(a){
-            let S = (a*a*3.14);
-            let C = (a*2*3.14);
-            alert("diện tích là"+S+" "+"chu vi là"+C);
+    function dienTich(a) {
+        let S = (Math.pow(a, 2) * 3.14);
+        return S;
     }
-    a=prompt("nhập bán kính hình tròn")*1;
-     hinhTron(a);
+
+    function chuVi(a) {
+        let C = (a * 2 * 3.14);
+        return C;
+    }
+
+    let d = prompt("nhập bán kính hình tròn") * 1;
+    alert("diện tích hình tròn là :" + " " + dienTich(d));
+    alert("chu vi hình tròn là :" + " " + chuVi(d));
+
 </script>
