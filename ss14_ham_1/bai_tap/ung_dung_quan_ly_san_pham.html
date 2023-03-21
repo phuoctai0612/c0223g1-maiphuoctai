@@ -143,18 +143,16 @@
           "                <button id=\"themvao\" style=\"background: #6fe26f\" onclick=\"taoBangDau()\">Add</button>\n" +
           "            </th>\n" +
           "        </tr>\n" +
-          "    </table>\n" +
-          "</fieldset>"+
+          "    </table>\n"
+    let  bangNho = "</fieldset>"+
           "<h2>Display All Product</h2>"+"    " +"<table>"+
           "<tr>\n" +
           "        <th align=\"left\">Product Name</th>\n" +
           "        <th></th>\n" +
           "        <th style=\"color: darkred\" align=\"right\">9 products</th>\n" +
-          "    </tr>" +"</table>"
-      let bangNho = '';
-      let a="<table>";
+          "    </tr>"
       for (let i = 0; i < sanPham.length; i++) {
-          bangNho += a+"<tr>\n" +
+          bangNho +="<tr>\n" +
               '        <td>' + sanPham[i] + '</td>\n' +
               "        <td align=\"center\">\n" +
               "            <button style=\"background: #6fe26f\" onclick='edit("+ i +")'>Edit</button>\n" +
@@ -164,14 +162,14 @@
               "        </td>\n" +
               "    </tr>"
       }
-      a+="</table>"
+      bangNho+="</table>"
       document.getElementById("taobanglon").innerHTML = r;
       document.getElementById("taobangnho").innerHTML = bangNho;
 
   }
   taoBang();
   function taoBangDau() {
-     a= document.getElementById("nhapvao").value
+   let  a= document.getElementById("nhapvao").value
       sanPham.push(a);
       taoBang();
   }

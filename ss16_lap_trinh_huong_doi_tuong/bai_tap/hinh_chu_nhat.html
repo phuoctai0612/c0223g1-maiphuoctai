@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+</body>
+</html>
+<script>
+    class HinhChuNhat {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        getChieuRong() {
+            return this.chieuRong = chieuRong;
+        }
+
+        getChieuDai() {
+            return this.chieuDai = chieuDai;
+        }
+
+        setChieuDai(chieuDai) {
+            this.chieuDai = chieuDai;
+        }
+
+        setChieuRong(chieuRong) {
+            this.chieuRong = chieuRong;
+        }
+
+        dienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+
+        chuVi() {
+            return (this.chieuDai + this.chieuRong) * 2;
+        }
+            canvas()
+            {
+                let c = document.getElementById("myCanvas");
+                let ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.rect(20, 20, this.chieuDai, this.chieuRong);
+                ctx.stroke();
+            }
+        }
+
+    let chieuRong = (prompt("nhập chiều rộng") * 1);
+    let chieuDai = (prompt("nhập chiều dài") * 1);
+    let hinhChuNhat = new HinhChuNhat(chieuDai, chieuRong);
+    alert("diện tích trước khi set đối số" + hinhChuNhat.dienTich());
+    alert("chu vi trước khi set đối số" + hinhChuNhat.chuVi());
+    hinhChuNhat.setChieuDai(50);
+    hinhChuNhat.setChieuRong(70);
+    alert("sau khi đưa vào đối số khác" + hinhChuNhat.dienTich());
+    alert("sau khi đưa vào đối số khác" + hinhChuNhat.chuVi());
+    hinhChuNhat.canvas();
+
+</script>

@@ -6,18 +6,16 @@
 </head>
 </html>
 <script>
-let person = {
-    name: ['Bob', 'Smith'],
-    age: 32,
-    gender: 'male',
-    interests: ['music', 'skiing'],
-    bio: function() {
-        alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+    function sum_even_numbers(){
+        var sum = 0;
+        for(let i=1;i<1001;i++){
+            if (i%2==0){
+                sum+=i;
+                console.log(sum)
+            }
+        }
+        return sum;
     }
-    ,
-    greeting: function() {
-        alert('Hi! I\'m ' + this.name[0] + '.');
-    }
-};
-person.greeting();
+    console.log(sum_even_numbers());
+
 </script>

@@ -10,18 +10,20 @@
 </html>
 <script>
     function createFunction(arr) {
-        let last = arr.length -1
+        let last = arr.length - 1
         for (let i = 0; i <= arr.length / 2; i++) {
-            if (arr[i] == arr[last - i]) {
-                return true;
+            if (arr[i] != arr[last - i]) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
-    function arr(array){
-     array = [5, 3, 4, 5, 4, 3, 1];
-     return array;
-        }
+
+    function arr(array) {
+        array = [5, 3, 4, 5, 5, 3, 5, 9, 8, 6, 4, 5];
+        return array;
+    }
+
     alert(createFunction(arr()));
 
 

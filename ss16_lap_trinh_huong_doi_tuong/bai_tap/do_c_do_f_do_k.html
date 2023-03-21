@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        doCSangF() {
+            return doC * 1.8 + 32;
+        }
+
+        doCSangK() {
+            return doC + 273.15;
+        }
+    }
+
+    let doC = 25;
+    let tinhToan = new Temperature(doC);
+    alert(tinhToan.doCSangF());
+    alert(tinhToan.doCSangK());
+</script>
