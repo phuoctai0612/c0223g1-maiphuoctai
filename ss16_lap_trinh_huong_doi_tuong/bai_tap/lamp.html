@@ -5,7 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-
 </body>
 </html>
 <script>
@@ -15,7 +14,7 @@
         }
 
         getStatus() {
-            return this.status = status;
+            return this.status;
         }
 
         turnOff() {
@@ -35,16 +34,28 @@
 
         switchOff() {
             this.lamp.turnOff();
-            this.status = true;
+            this.status = false;
         }
 
         switchOn() {
             this.lamp.turnOn();
-            this.status = false;
+            this.status = true;
         }
 
         connectToLamp(lamp1) {
             this.lamp = lamp1;
         }
     }
+
+    let electricLamp = new Electriclamp(true);
+    let switchButton = new SwitchButton(true, electricLamp);
+    switchButton.switchOff()
+    if (electricLamp.getStatus() == true) {
+        alert("đang bật đèn");
+    } else {
+        electricLamp.getStatus() == false
+        alert("đèn túi thui");
+    }
+
+
 </script>
