@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+<p id="chuabang"></p>
+
+</body>
+</html>
+<script>
+    let tenLop = ["Hoàng", "Hải", "Tân", "Quỳnh", "Mơ", "Trâm", "Thuận"];
+
+    function taoBang() {
+        let bangHai = "<table>";
+        let bangDau = "<table>\n" +
+            "    <tr>\n" +
+            "        <th>Chỗ thêm giá trị</th>\n" +
+            "        <th> <input type=\"text\" id=\"themvao\"> </th>\n" +
+            "        <th> <button onclick=\"themGiaTri()\">Thêm</button> </th>\n" +
+            "    </tr>\n" +
+            "</table>";
+        for (let j = 0; j < tenLop.length; j++) {
+            bangDau += bangHai + "  <tr >\n" +
+                "    <th>" + j + "</th>\n" +
+                "    <th>" + tenLop[j] + "</th>\n" +
+                "    <th> <button onclick=\"suaGiaTri("+j+")\"> Sửa </button> </th>\n" +
+                "    <th> <button onclick=\"xoaGiaTri("+j+")\"> Xóa</button> </th>\n" +
+                "  </tr>";
+        }
+        bangDau += "</table>"
+        document.getElementById("chuabang").innerHTML = bangDau;
+    }
+    taoBang();
+
+    function suaGiaTri(index) {
+        let suaGiaTri = prompt("nhập thứ bạn muốn thay đổi");
+        tenLop[index] = suaGiaTri;
+        taoBang();
+    }
+    function xoaGiaTri(index) {
+        tenLop.splice(index,1);
+        taoBang();
+    }
+    function themGiaTri(){
+      let a = document.getElementById("themvao").value;
+      tenLop.push(a);
+      taoBang();
+    }
+
+</script>

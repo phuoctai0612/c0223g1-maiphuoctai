@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let a = prompt("nhập chiều cao");
+    let datBien='';
+    for (let i = 1; i <= a; i++) {
+        if (i % 2 != 0) {
+            for (let k =a; k > i ; k--) {
+                datBien+="&nbsp;"
+            }
+            for (let j = 0; j < i; j++) {
+              datBien+="*";
+            }
+           datBien+="<br>";
+        }
+    }
+    document.write(datBien);
+
+</script>

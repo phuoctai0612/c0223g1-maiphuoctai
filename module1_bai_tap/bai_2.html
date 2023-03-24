@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let timNguyenAm=prompt("nhập từ tiếng anh muốn kiểm tra");
+    let arr=["o","u","i","a","e","O","U","I","A","E"];
+    let flag = true;
+    for (let i = 0; i < arr.length; i++) {
+        if (timNguyenAm==arr[i]){
+           flag = false;
+        }
+    }
+    if (flag){
+        alert("đó là phụ âm");
+    }else {
+        alert("đó là nguyên âm");
+    }
+</script>

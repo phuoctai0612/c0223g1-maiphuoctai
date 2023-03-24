@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = prompt("nhập số");
+    let bienRong = '';
+    for (let i =1; i <= a; i++) {
+        if (i % 2 != 0) {
+            for (let j = a; j > i; j--) {
+                bienRong += "&nbsp";
+            }
+            for (let j =1; j <= i; j++) {
+                if (i == 1 || i == a || j == 1 || j == i) {
+                    bienRong += "*";
+                } else {
+                    bienRong += "&nbsp;&nbsp;";
+                }
+            }
+            bienRong += "<br>"
+        }
+    }
+    document.write(bienRong);
+</script>

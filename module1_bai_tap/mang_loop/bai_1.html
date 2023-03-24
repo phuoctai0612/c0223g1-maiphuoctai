@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a =[1,2,3,4,5,6,7,8,9];
+    let b=new Array(a.length);
+
+    for (let i =0; i < a.length; i++) {
+        b[i]=0;
+        for (let j = 0; j <=i ; j++) {
+            b[i]+=a[j];
+        }
+    }
+    alert(b);
+
+</script>

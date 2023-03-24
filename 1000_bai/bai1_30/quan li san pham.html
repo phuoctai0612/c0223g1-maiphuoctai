@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            width: 120px;
+        }
+        button{
+            background: #e1e192;
+        }
+
+
+    </style>
+</head>
+<body>
+<p id="taobang"></p>
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th align="left"> Add New Product</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th><input type="text"></th>-->
+<!--        <th>-->
+<!--            <button onclick="themGiaTri()">Add</button>-->
+<!--        </th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th align="left">Display All Product</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Product Name</td>-->
+<!--        <td>9 products</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td> aaa</td>-->
+<!--        <td><button onclick="suaTen">Sửa</button></td>-->
+<!--        <td><button onclick="xoaTen">Xóa</button></td>-->
+<!--    </tr>-->
+<!--</table>-->
+</body>
+</html>
+<script>
+    let tenLop = ["Quốc", "Tèi", "Toản", "Tính", "Sang", "Tài", "Vũ", "Quý"];
+    function bangTen() {
+        let taoBang = "<table>" + "<tr>\n" +
+            "        <th align=\"left\"> Add New Product</th>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <th><input type=\"text\" id='themvao'></th>\n" +
+            "        <th>\n" +
+            "            <button onclick=\"themGiaTri()\">Add</button>\n" +
+            "        </th>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <th align=\"left\">Display All Product</th>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" + "        <td>STT</td>\n" +
+            "        <td>Product Name</td>\n" +
+            "    </tr>";
+        for (let i = 0; i < tenLop.length; i++) {
+            taoBang += " <tr>\n" + "        <td>" + (i+1) + "</td>\n" +
+                "        <td>" + tenLop[i] + "</td>\n" +
+                "        <td><button onclick=\"suaTen(" + i + ")\">Sửa</button></td>\n" +
+                "        <td><button onclick=\"xoaTen(" + i + ")\">Xóa</button></td>\n" +
+                "    </tr>"
+        }
+        taoBang += "</table>"
+        document.getElementById("taobang").innerHTML = taoBang;
+    }
+
+    bangTen();
+    function suaTen(index){
+        let thayChu = prompt("nhập tên bạn muốn thay vào chỗ này");
+        tenLop[index]=thayChu;
+        bangTen();
+    }
+    function xoaTen(index){
+        tenLop.splice(index,1);
+        bangTen();
+    }
+    function themGiaTri(){
+     let tenThayThe=document.getElementById("themvao").value;
+        tenLop.push(tenThayThe);
+        bangTen();
+
+    }
+</script>

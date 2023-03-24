@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        td{
+           width:  25px;
+            height: 25px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="taobang"></p>
+</body>
+</html>
+<script>
+    let arr=[10];
+    for (let i = 0; i < 10; i++) {
+        arr[i]=arr[10];
+        for (let j = 0; j < 10; j++) {
+            arr[i][j]=[];
+        }
+    }
+    function taoChoi() {
+        let taoBang = "<table border='1' cellpadding='8' cellspacing='0'>";
+        for (let i = 0; i < 10; i++) {
+            taoBang += "<tr>";
+            for (let j = 0; j < 10; j++) {
+                taoBang += " <td onclick='caRo(" +i + ','+ j + ")'>"+arr[i][j]+" </td> ";
+            }
+            taoBang += "</tr>"
+        }
+        taoBang += "</table>"
+        document.getElementById("taobang").innerHTML = taoBang;
+    }
+    taoChoi();
+    function caRo(index1,index2){
+
+    }
+</script>
