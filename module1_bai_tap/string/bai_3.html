@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = prompt("nhap zo");
+    let b = prompt("nhap zo");
+    let count = 0;
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            if (a[i] == b[j]) {
+                b.splice(j,1);
+                count++;
+                break;
+            }
+        }
+    }
+    alert(count);
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function taoBang() {
+        let a = "        mAi           pHUoc         Tai      ";
+        let b = "";
+        let c;
+        let arr = a.split(" ");
+        for (let i = 0; i < arr.length; i++) {
+            c = arr[i].toLowerCase();
+
+            if (c != " ") {
+                c = c.substr(0, 1).toUpperCase() + c.substr(1);
+                b += c+" ";
+            }
+        }
+
+        alert(b.replace(/\s+/g, ' ').trim());
+    }
+
+    taoBang();
+
+</script>
+<!--// function xoaKhoangTrang() {-->
+<!--//     let a = prompt("nhập tên").split(" ",);-->
+<!--//     while (a[0] == " ") {-->
+<!--//         a.splice(0, 1);-->
+<!--//     }-->
+<!--//     while (a[a.length - 1] == " ") {-->
+<!--//         a.splice(a[a.length - 1], 1);-->
+<!--//     }-->
+<!--//     for (let i = 1; i < a.length; i++) {-->
+<!--//         if (a[i] == " " && a[i + 1] == " ") {-->
+<!--//             a.splice(i, 1);-->
+<!--//             i&#45;&#45;;-->
+<!--//         }-->
+<!--//     }-->
+<!--//     if (a[0] != 0) {-->
+<!--//         a[0] = a[0].toUpperCase();-->
+<!--//     }-->
+<!--//     document.write(a);-->
+<!--// }-->
+<!--//-->
+<!--// xoaKhoangTrang();-->

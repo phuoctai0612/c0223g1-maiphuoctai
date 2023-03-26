@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = ["q", "w", "e", "t", "t", "y", "u", "i", "s", "g", "h", "j", "k"];
+    for (let i = 0; i < a.length; i++) {
+        for (let j = i + 1; j < a.length; j++) {
+            if (a[i] == a[j]) {
+                a.splice(j, 1);
+            }
+        }
+    }
+    alert("co " + a.length + " ki tu khac nhau");
+</script>
