@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="taobang"></p>
+</body>
+</html>
+<script>
+    class Student {
+        constructor(ma, ten, lop, email, ngaysinh, module) {
+            this.ma = ma;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaysinh = ngaysinh;
+            this.module = module;
+        }
+
+        getMa(ma) {
+            return this.ma;
+        }
+
+        getTen(ten) {
+            return this.ten;
+        }
+
+        getLop(lop) {
+            return this.lop;
+        }
+
+        getEmail(email) {
+            return this.email;
+        }
+
+        getNgaySinh(ngaysinh) {
+            return this.ngaysinh;
+        }
+
+        getModule(module) {
+            return this.module;
+        }
+
+        setMa(ma) {
+            this.ma=ma;
+        }
+
+        setTen(ten) {
+            this.ten=ten;
+        }
+
+        setLop(lop) {
+            this.lop=lop;
+        }
+
+        setEmail(email) {
+            this.email=email;
+        }
+
+        setNgaySinh(ngaysinh) {
+            this.ngaysinh=ngaysinh;
+        }
+
+        setModule(module) {
+            this.module=module;
+        }
+
+    }
+let arr=[];
+    arr.push(new Student("HV-0000","Mai Phước Tài","C0223G1","sieuem2002@gmail.com","06/12/01","Module1"));
+    arr.push(new Student("HV-0001","Lê Thị Thuận","C0223G1","sieuem200@gmail.com","08/09/01","Module1"));
+    function taoBang(arr) {
+         let taoBang = "<table border='1'>\n" +
+               "    <tr>\n" +
+               "        <th> STT </th>\n" +
+               "        <th> Mã </th>\n" +
+               "        <th> Tên Lớp </th>\n" +
+               "        <th> Email </th>\n" +
+               "        <th> Ngày Sinh </th>\n" +
+               "        <th> Module </th>\n" +
+               "    </tr>";
+        for (let i = 0; i < arr.length ; i++) {
+     taoBang+=" <tr>\n" +
+         "        <td> "+(i+1)+" </td>\n" +
+         "        <td> "+arr[i].getMa()+" </td>\n" +
+         "        <td> "+arr[i].getTen()+" </td>\n" +
+         "        <td> "+arr[i].getLop()+" </td>\n" +
+         "        <td> "+arr[i].getEmail()+" </td>\n" +
+         "        <td> "+arr[i].getModule()+" </td>\n" +
+         "    </tr>";
+        }
+        taoBang+="</table>";
+        document.getElementById("taobang").innerHTML= taoBang;
+    }
+    taoBang(arr);
+</script>

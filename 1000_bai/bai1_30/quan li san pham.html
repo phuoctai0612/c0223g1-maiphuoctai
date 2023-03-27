@@ -7,7 +7,8 @@
         td {
             width: 120px;
         }
-        button{
+
+        button {
             background: #e1e192;
         }
 
@@ -43,6 +44,7 @@
 </html>
 <script>
     let tenLop = ["Quốc", "Tèi", "Toản", "Tính", "Sang", "Tài", "Vũ", "Quý"];
+
     function bangTen() {
         let taoBang = "<table>" + "<tr>\n" +
             "        <th align=\"left\"> Add New Product</th>\n" +
@@ -60,7 +62,7 @@
             "        <td>Product Name</td>\n" +
             "    </tr>";
         for (let i = 0; i < tenLop.length; i++) {
-            taoBang += " <tr>\n" + "        <td>" + (i+1) + "</td>\n" +
+            taoBang += " <tr>\n" + "        <td>" + (i + 1) + "</td>\n" +
                 "        <td>" + tenLop[i] + "</td>\n" +
                 "        <td><button onclick=\"suaTen(" + i + ")\">Sửa</button></td>\n" +
                 "        <td><button onclick=\"xoaTen(" + i + ")\">Xóa</button></td>\n" +
@@ -71,17 +73,20 @@
     }
 
     bangTen();
-    function suaTen(index){
+
+    function suaTen(index) {
         let thayChu = prompt("nhập tên bạn muốn thay vào chỗ này");
-        tenLop[index]=thayChu;
+        tenLop[index] = thayChu;
         bangTen();
     }
-    function xoaTen(index){
-        tenLop.splice(index,1);
+
+    function xoaTen(index) {
+        tenLop.splice(index, 1);
         bangTen();
     }
-    function themGiaTri(){
-     let tenThayThe=document.getElementById("themvao").value;
+
+    function themGiaTri() {
+        let tenThayThe = document.getElementById("themvao").value;
         tenLop.push(tenThayThe);
         bangTen();
 

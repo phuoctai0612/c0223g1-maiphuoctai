@@ -9,13 +9,16 @@
 </body>
 </html>
 <script>
-    let luongCung=prompt("Tháng của bạn đc bao nhiêu triệu đồng");
-    if (luongCung>=15){
-         luongCung*=20/100;
-    }else if (luongCung>=7){
-        luongCung*=10/100;
-    }else {
-        luongCung*=5/100;
+    let luongCung = prompt("Tháng của bạn đc bao nhiêu triệu đồng");
+    let thueTien = 0;
+    if (luongCung >= 15) {
+        thueTien = luongCung * 20 / 100;
+    } else if (luongCung >= 7) {
+        thueTien = luongCung * 10 / 100;
+    } else if (luongCung > 0) {
+        thueTien = luongCung * 5 / 100;
+    } else {
+        alert("nhập tào lao");
     }
-    alert(luongCung+"Triệu đồng");
+    alert("Thuế của bạn là " + thueTien + " Triệu đồng " + "," + "Tháng lương của bạn là " + luongCung + " Triệu đồng");
 </script>

@@ -8,16 +8,19 @@
             height: 50px;
             width: 70px;
         }
-        th{
+
+        th {
             height: 60px;
         }
-        button{
+
+        button {
             width: 70px;
         }
     </style>
 </head>
 <body>
 <p id=" tinhtien "></p>
+<p id=" tinhtien1 "></p>
 
 </body>
 </html>
@@ -26,33 +29,35 @@
     let giaTien = [20, 25, 500, 15, 10, 20]
 
     function taoBang() {
-        let dauBang = "<table border=\"1\" cellspacing=\"0\">"+  "<tr> <th colspan='3'> Menu </th> </tr>"       +"<tr>";
+        let dauBang = "<table border=\"1\" cellspacing=\"0\">" + "<tr> <th colspan='3'> Menu </th> </tr>" + "<tr>";
         for (let i = 0; i < menu.length; i++) {
-            dauBang+="       <td>"+ "Món "+(i+1) +"</td>\n" +
-                  "        <td><button onclick='goiMon("+ i +")' >"+ menu[i] +"</button></td>"+
-            "        <td> "+ giaTien[i]+"Nghìn" +" </td>\n"+"</tr>"
+            dauBang += "       <td>" + "Món " + (i + 1) + "</td>\n" +
+                "        <td><button onclick='goiMon(" + i + ")' >" + menu[i] + "</button></td>" +
+                "        <td> " + giaTien[i] + "Nghìn" + " </td>\n" + "</tr>"
         }
-        dauBang+="<tr><button onclick=\"xoaTien()\">Thoát</button></tr>"+"</table>";
-        document.getElementById(" tinhtien ").innerHTML=dauBang;
+        dauBang += "<tr><button onclick=\"xoaTien()\">Thoát</button></tr>" + "</table>";
+        document.getElementById(" tinhtien ").innerHTML = dauBang;
     }
+
     taoBang();
 
-    function goiMon(index){
-       let a=confirm("Muốn nhiu");
-       let b;
-       if (a==true){
-          b= prompt("muốn mua nhiu nè");
-           alert(giaTien[index]*b+" "+"Nghìn");
-       }else {
-           alert("không đặt đừng bấm");
-       }
+    function goiMon(index) {
+        let a = confirm("Muốn nhiu");
+        let b;
+        if (a == true) {
+            b = prompt("muốn mua nhiu nè");
+            alert(giaTien[index] * b + " " + "Nghìn");
+        } else {
+            alert("không đặt đừng bấm");
+        }
     }
-    function xoaTien(){
-       let a= confirm("bạn có chắc muốn hủy khôn");
-       if (a==true){
-           alert("vô phòng vệ sinh nói chuyện");
-       }else {
-           alert("quý khách muốn đặt món gì chọn giúp e ạ");
-       }
+
+    function xoaTien() {
+        let a = confirm("bạn có chắc muốn hủy khôn");
+        if (a == true) {
+            alert("vô phòng vệ sinh nói chuyện");
+        } else {
+            alert("quý khách muốn đặt món gì chọn giúp e ạ");
+        }
     }
 </script>

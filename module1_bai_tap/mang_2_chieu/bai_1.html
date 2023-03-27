@@ -11,15 +11,23 @@
 <script>
     let n = parseInt(prompt("nhap so"));
     let m = parseInt(prompt("nhap so"));
-    let arr=[n][m];
-
-
-        for (let i = 0; i < n.length; i++) {
-            for (let j = 0; j < m.length; j++) {
-
+    let arr=[m];
+        for (let i = 0; i < n; i++) {
+            arr[i]=[n];
+            for (let j = 0; j < m; j++) {
+                arr[i][j] = +prompt(" nhập phần tử thứ "+i +"," +j);
             }
         }
-
-
-
+        function congChan(){
+            let count =0;
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < m; j++) {
+                    if (arr[i][j]%2==0){
+                        count+=arr[i][j];
+                    }
+                }
+            }
+           return count;
+        }
+       alert(congChan());
 </script>

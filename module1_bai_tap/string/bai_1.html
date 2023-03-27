@@ -5,48 +5,40 @@
     <title>Title</title>
 </head>
 <body>
-
 </body>
 </html>
 <script>
-    function taoBang() {
-        let a = "        mAi           pHUoc         Tai      ";
-        let b = "";
-        let c;
-        let arr = a.split(" ");
-        for (let i = 0; i < arr.length; i++) {
-            c = arr[i].toLowerCase();
 
-            if (c != " ") {
-                c = c.substr(0, 1).toUpperCase() + c.substr(1);
-                b += c+" ";
+
+    function taoBang() {
+        let nhapTen = prompt("nhap");
+        let b = "";
+        let bienChua, bienChua1, congMax = "";
+        let arr = nhapTen.split(" ");
+        let max;
+        for (let i = 0; i < arr.length; i++) {
+            bienChua = arr[i].toLowerCase();
+
+            if (bienChua != " ") {
+                bienChua = bienChua.substr(0, 1).toUpperCase() + bienChua.substr(1);
+                b += bienChua + " ";
             }
         }
-
-        alert(b.replace(/\s+/g, ' ').trim());
+        bienChua1 = b.replace(/\s+/g, ' ').trim();
+        let y = bienChua1.split(" ");
+        max = y[0].length
+        for (let i = 0; i < y.length; i++) {
+            if (max < y[i].length) {
+                max = y[i].length;
+                congMax = y[i];
+            } else if (max == y[i].length) {
+                congMax += y[i];
+            }
+        }
+        alert("Trước khi chuỗi hóa " + nhapTen);
+        alert("Sau khi chuỗi hóa " + bienChua1 + " và Max là " + congMax);
     }
 
     taoBang();
 
 </script>
-<!--// function xoaKhoangTrang() {-->
-<!--//     let a = prompt("nhập tên").split(" ",);-->
-<!--//     while (a[0] == " ") {-->
-<!--//         a.splice(0, 1);-->
-<!--//     }-->
-<!--//     while (a[a.length - 1] == " ") {-->
-<!--//         a.splice(a[a.length - 1], 1);-->
-<!--//     }-->
-<!--//     for (let i = 1; i < a.length; i++) {-->
-<!--//         if (a[i] == " " && a[i + 1] == " ") {-->
-<!--//             a.splice(i, 1);-->
-<!--//             i&#45;&#45;;-->
-<!--//         }-->
-<!--//     }-->
-<!--//     if (a[0] != 0) {-->
-<!--//         a[0] = a[0].toUpperCase();-->
-<!--//     }-->
-<!--//     document.write(a);-->
-<!--// }-->
-<!--//-->
-<!--// xoaKhoangTrang();-->
