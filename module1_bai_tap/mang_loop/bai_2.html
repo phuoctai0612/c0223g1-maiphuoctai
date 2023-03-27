@@ -9,9 +9,12 @@
 </body>
 </html>
 <script>
-    let a = [1, 2, 3, 4, 5, 6, 7, 9, 5, 6, 4, 7];
-    let b = [1, 2, 3];
-    let c = [];
+
+
+    let a = [2, 4, 5, 6, 6, 6, 7, 9, 9, 9, 9, 9, 1, 53, 5, 6, 45, 73, 43, 43, 43, 43, 10, 9, 9, 43, 9];
+    let b = [2, 4, 5, 3, 7, 0, 5, 10, 9, 6, 7, 4, 23, 4];
+    let c=[];
+
     for (let i = 0; i < b.length; i++) {
         for (let j = 0; j < a.length; j++) {
             if (b[i] == a[j]) {
@@ -30,8 +33,11 @@
             }
         }
     }
-    c.sort(function (a, b) {
-        return b - a;
+
+
+    a.sort(function (a,b){
+        return b-a;
+
     })
     c.push(a);
     document.write(c);

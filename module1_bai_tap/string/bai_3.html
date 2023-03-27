@@ -9,19 +9,21 @@
 </body>
 </html>
 <script>
-    let a =["q","t","t","w","e","r","t","y","u","i","o"];
-    let b = ["q","q","e","e","t","t","t"];
-    let c=[];
+    let a = ["q", "t", "t", "w", "e", "r", "t", "y", "u", "i", "o"];
+    let b = ["q", "q", "e", "e", "t", "t", "t"];
+    let c = [];
     let count = 0;
     for (let i = 0; i < a.length; i++) {
         for (let j = 0; j < b.length; j++) {
             if (a[i] == b[j]) {
                 c.push(b[j]);
                 count++;
-                break;
+                break
             }
         }
     }
-    alert(c+" "+"có"+count+" kí tự chung");
+    alert("các kí tự chung là "+c + " " + "có " + count + " kí tự chung");
+
+
 
 </script>

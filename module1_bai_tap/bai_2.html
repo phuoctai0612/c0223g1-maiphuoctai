@@ -9,6 +9,7 @@
 </body>
 </html>
 <script>
+
     let timNguyenAm = prompt("nhập chữ muốn kiểm tra").split();
     let arr = ["o", "u", "i", "a", "e", "O", "U", "I", "A", "E"];
     let flag = true;
@@ -16,10 +17,9 @@
         if (timNguyenAm == arr[i]) {
             flag = false;
         }
-    }
-    if (flag) {
+    }if (flag){
         alert("đó là phụ âm");
-    } else {
+    }else {
         alert("đó là nguyên âm");
     }
 </script>
