@@ -9,13 +9,12 @@
 </body>
 </html>
 <script>
-    let n = parseInt(prompt("nhap so"));
-    let m = parseInt(prompt("nhap so"));
-<<<<<<< HEAD
-    let arr=[m];
-        for (let i = 0; i < n; i++) {
-            arr[i]=[n];
-            for (let j = 0; j < m; j++) {
+    let n = parseInt(prompt("nhập số hàng"));
+    let m = parseInt(prompt("nhập số cột"));
+    let arr=[];
+        for (let i = 0; i < m; i++) {
+            arr[i]=[];
+            for (let j = 0; j < n; j++) {
                 arr[i][j] = +prompt(" nhập phần tử thứ "+i +"," +j);
             }
         }
@@ -31,17 +30,5 @@
            return count;
         }
        alert(congChan());
-=======
-    let arr=[n][m];
 
-
-        for (let i = 0; i < n.length; i++) {
-            for (let j = 0; j < m.length; j++) {
-
-            }
-        }
-
-
-
->>>>>>> 4dcf3f46159c0443435b4af70b00df34d76ec28f
 </script>

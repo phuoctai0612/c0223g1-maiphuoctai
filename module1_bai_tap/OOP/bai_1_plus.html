@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 800px;
+            height: 60px;
+        }
+
+        button {
+            width: 120px;
+            height: 60px;
+            background: lightgrey;
+        }
+        th{
+            background: #e1e192;
+        }
+
+        td {
+            text-align: center;
+            width: 120px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+<p id="taobang"></p>
+<button onclick="themBang()">Them</button>
+<button onclick="xoaBang()">Xoa</button>
+<button onclick="chinhBang()">Edit</button>
+</body>
+</html>
+<script>
+    class Student {
+        constructor(ma, ten, lop, email, module, diemthi) {
+            this.ma = ma;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.module = module;
+            this.diemthi = diemthi;
+        }
+
+        getMa() {
+            return this.ma;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getLop() {
+            return this.lop;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        getDiemthi() {
+            return this.diemthi;
+
+        }
+
+        setMa(value) {
+            this.ma = value;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+
+        setLop(value) {
+            this.lop = value;
+        }
+
+        setEmail(value) {
+            this.email = value;
+        }
+
+        setModule(value) {
+            this.module = value;
+        }
+
+        setDiemthi(value) {
+            this.diemthi = value;
+        }
+    }
+
+    let arr = [];
+    arr.push(new Student("hv-1", "thuan", "c02", "thuan@gmail.com", "1", "7"));
+    arr.push(new Student("hv-2", "tai", "c02", "tai@gmail.com", "1", "7"));
+
+    function bangThi() {
+        let taoBang = "<table border='1' cellspacing='0'>\n" +
+            "    <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Ma</th>\n" +
+            "        <th>Ten</th>\n" +
+            "        <th>Lop</th>\n" +
+            "        <th>Email</th>\n" +
+            "        <th>Module</th>\n" +
+            "        <th>Điểm thi module1</th>\n" +
+            "    </tr>";
+        for (let i = 0; i < arr.length; i++) {
+            taoBang += "<tr>\n" +
+                "        <td> " + (i + 1) + "</td>\n" +
+                "        <td> " + arr[i].ma + " </td>\n" +
+                "        <td>" + arr[i].ten + "</td>\n" +
+                "        <td>" + arr[i].lop + " </td>\n" +
+                "        <td> " + arr[i].email + " </td>\n" +
+                "        <td>" + arr[i].module + "</td>\n" +
+                "        <td>" + arr[i].diemthi + "</td>\n" +
+                "    </tr>";
+        }
+        taoBang += "</table>";
+        document.getElementById("taobang").innerHTML = taoBang;
+    }
+
+    bangThi();
+
+    function themBang() {
+        let ma = prompt("nhap ma");
+        let ten = prompt("nhap ten");
+        let lop = prompt("nhap lop");
+        let email = prompt("nhap email");
+        let module = prompt("nhap module");
+        let diemthi = prompt("nhap diem thi");
+        let hocSinh = new Student(ma, ten, lop, email, module, diemthi);
+        arr.push(hocSinh);
+        bangThi();
+    }
+
+    function xoaBang() {
+        let xoa = prompt("nhap ma muon xoa");
+        for (let i = 0; i < arr.length; i++) {
+            if (xoa == arr[i].ma) {
+                arr.splice(i, 1);
+            }
+        }
+        bangThi();
+    }
+
+    function chinhBang() {
+        let a = prompt("nhap ma ban muon thay doi");
+        for (let i = 0; i < arr.length; i++) {
+            if (a == arr[i].ma) {
+                arr[i].setMa(prompt(" "));
+                arr[i].setTen(prompt(" ")) ;
+                arr[i].setLop(prompt(" ")) ;
+                arr[i].setEmail(prompt(" ")) ;
+                arr[i].setModule(prompt(" "));
+                arr[i].setDiemthi(prompt(" ")) ;
+            }
+        }
+        bangThi();
+    }
+</script>
