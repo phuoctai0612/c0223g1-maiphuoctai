@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let n=prompt("nhập số").split(" ");
+  flag = true;
+alert(n);
+  for (let i = 0; i < 1; i++) {
+      if (n[i] > n[i + 1]) {
+          for (let j = 1; j < n.length - 1; j++) {
+              if (n[j] >= n[j + 1]) {
+                  flag=false;
+              } else {
+                 flag=true;
+                  break;
+              }
+          }
+      }
+  }
+  for (let i = 0; i < 1; i++) {
+      if (n[i] < n[i + 1]) {
+          for (let j = 1; j < n.length-1; j++) {
+              if (n[j] <= n[j + 1]) {
+                  flag=false;
+              } else {
+                 flag=true;
+                  break;
+              }
+          }
+      }
+  }
+  if (flag){
+      alert("No")
+  }else {
+      alert("Yes sir");
+  }
+
+
+</script>

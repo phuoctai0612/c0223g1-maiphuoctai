@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function tuVietTat(arr) {
+        let c = arr.split(" ");
+        alert(c)
+        let a = "";
+        for (let i = 0; i < c.length; i++) {
+            if (c[i] == "") {
+                c.splice(i, 1);
+                i--;
+            }
+        }
+        alert(c);
+        for (let i = 0; i < c.length; i++) {
+            if (c.length > 2) {
+                a += c[i].charAt(0).toUpperCase()
+            } else {
+               return  alert("chuỗi chỉ có 1 từ k cần viết tắt");
+            }
+        }
+        return a;
+    }
+
+    alert(tuVietTat("object     Oriented   programming"));
+</script>

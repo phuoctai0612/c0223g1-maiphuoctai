@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let n=prompt("nhập").split("");
+  alert(n);
+  let count=0;
+  let index=0;
+  for (let i = 0; i < n.length; i++) {
+      if ( n[i]%2==0){
+          count++;
+      }else if (n[i]%2!=0){
+          index++;
+      }
+  }
+  if (count==index){
+      alert("OK");
+  }else {
+      alert("NO Ố KỀ");
+  }
+</script>

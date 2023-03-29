@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let n=prompt("nhập độ dài mảng");
+  let arr=[];
+  for (let i = 0; i < n; i++) {
+      let m=prompt("nhập phần tử của mảng");
+      arr.push(m);
+  }
+  alert("các phần tử của mảng là "+arr)
+  for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr.length; j++) {
+          if (arr[i]==arr[j]){
+              arr.splice(j,1);
+          }
+      }
+  }
+  alert("mảng sau khi xóa hết các phẩn tử khác nhau "+arr);
+</script>

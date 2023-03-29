@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 1000px;
+            height: 100px;
+        }
+        button{
+          height: 40px;
+            background: lightgrey;
+        }
+    </style>
+</head>
+<body>
+<p id="taobang"></p>
+<button onclick="xoaBang()">  Xóa  </button>
+<button onclick="themBang()"> Thêm  </button>
+<button onclick="chinhSua()">Chỉnh Sửa</button>
+</body>
+</html>
+<script>
+    class MayTinh {
+        constructor(ma, ten, tenHang, gia) {
+            this.ma = ma;
+            this.ten = ten;
+            this.tenHang = tenHang;
+            this.gia = gia;
+        }
+
+        getMa() {
+            return this.ma;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getTenHang() {
+            return this.tenHang;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setMa(value) {
+            this.ma = value;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+
+        setTenHang(value) {
+            this.tenHang = value;
+        }
+
+        setGia(value) {
+            this.gia = value;
+        }
+    }
+
+    let arr = [];
+    arr.push(new MayTinh("001", "Dell", "LG", "2"))
+    arr.push(new MayTinh("002", "Apple", "Apple", "5"))
+
+    function taoBang(arr) {
+        arr.sort(function (a,b){
+         return    a.gia-b.gia;
+        })
+        let taoBang = "<table border='1'>\n" +
+            "    <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Mã máy</th>" +
+            "        <th>Tên máy</th>\n" +
+            "        <th>Tên hãng</th>\n" +
+            "        <th>Giá bán (Triệu Đồng)</th>\n" +
+            "    </tr>"
+        for (let i = 0; i < arr.length; i++) {
+            taoBang += "  <tr>\n" +
+                "        <td>"+(i+1)+"</td>\n" +
+                "        <td>"+arr[i].ma+"</td>\n" +
+                "        <td>"+arr[i].ten+"</td>\n" +
+                "        <td>"+arr[i].tenHang+"</td>\n" +
+                "        <td>"+arr[i].gia+"</td>\n" +
+                "    </tr>";
+        }
+        taoBang += "</table>";
+        document.getElementById("taobang").innerHTML = taoBang;
+    }
+
+    taoBang(arr);
+    function xoaBang(){
+        let a=prompt("nhập mã máy muốn xóa");
+        for (let i = 0; i < arr.length; i++) {
+            if (a==arr[i].ma){
+                arr.splice(i,1);
+            }
+        }
+        taoBang(arr);
+    }
+    function themBang(){
+        let ma = prompt("nhập mã");
+        let ten=prompt("nhập tên");
+        let tenHang=prompt("nhập tên hàng");
+        let gia = prompt("nhập giá tiền");
+        let tong = new MayTinh(ma,ten,tenHang,gia);
+        arr.push(tong);
+        taoBang(arr);
+    }
+    function chinhSua(){
+        let a= prompt("chọn mã bạn muốn xóa");
+        for (let i = 0; i < arr.length; i++) {
+            if (a==arr[i].ma){
+                arr[i].setTen(prompt("nhập tên mới"));
+                arr[i].setTenHang(prompt("nhập tên hàng"));
+                arr[i].setGia(prompt("nhập giá"));
+            }
+        }
+        taoBang(arr);
+    }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function kiemTraMang(arr) {
+        let a = 0;
+        let b = 1;
+        let c = 0;
+        let arr1 = [];
+        let arr2 = [];
+        arr1.push(a);
+        arr1.push(b);
+        let max = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        for (let i = 0; i < max; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+            arr1.push(c);
+        }
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[i] == arr1[j]) {
+                    arr2.push(arr[i]);
+                    break;
+                }
+            }
+        }
+        return arr2.sort(function (a, b) {
+            return a - b;
+        });
+    }
+
+    alert(kiemTraMang([1, 5, 6, 13, 9, 12, 8, 0, 5, 1]));
+</script>

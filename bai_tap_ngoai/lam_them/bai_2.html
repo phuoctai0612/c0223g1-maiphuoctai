@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let n=prompt("nhập độ dài của mảng");
+  let arr=[];
+  let countChan=0;
+  let countLe=0;
+  for (let i = 0; i < n; i++) {
+      let m = prompt("nhập phần tử trong mảng");
+      arr.push(m);
+  }
+  alert(arr);
+  for (let i = 0; i < arr.length; i++) {
+      if (arr[i]%2==0){
+          countChan++;
+      }else if (arr[i]%2!=0){
+          countLe++;
+      }
+  }
+  if (countChan==countLe){
+      alert("ồ kề");
+  }else {
+      alert("nô ố kề");
+  }
+</script>

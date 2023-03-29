@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let n=prompt("nhập độ dài của mảng");
+  let arr=[];
+let flag = true;
+  for (let i = 0; i < n; i++) {
+      let m=prompt("nhập phần tử của mảng");
+      arr.push(m);
+  }
+  alert(arr);
+  for (let i = 0; i < parseInt(arr.length/2); i++) {
+      if (arr[i]==arr[arr.length-1-i]){
+          flag = false;
+      }else {
+          flag = true;
+          break;
+      }
+  }
+  if (flag){
+      alert("Nót ố kề");
+  }else {
+      alert("Ố kề");
+  }
+</script>

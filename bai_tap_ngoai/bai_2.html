@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function checkArray(arr){
+   flag = false;
+      for (let i = 0; i < arr.length/2; i++) {
+          if (Math.pow(arr[i],2)==arr[arr.length/2+i]){
+           flag=true;
+          }else {
+              flag=false;
+          }
+      }if (flag){
+          return true;
+      }else {
+          return false;
+      }
+  }
+ alert(checkArray([1,2,3,1,4,4]));
+</script>
