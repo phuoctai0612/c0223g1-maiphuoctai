@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="taobang"></p>
+<button onclick="xoaBang()">Xóa</button>
+<button onclick="themBang()">Thêm</button>
+<button onclick="chinhBang()">Sửa</button>
+</body>
+</html>
+<script>
+    class Student {
+        constructor(ma, ten, lop, module) {
+            this.ma = ma;
+            this.ten = ten;
+            this.lop = lop;
+            this.module = module;
+        }
+
+        getMa() {
+            return this.ma;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getLop() {
+            return this.lop;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        setMa(ma) {
+            this.ma = ma;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        setLop(lop) {
+            this.lop = lop;
+        }
+
+        setModule(module) {
+            this.module = module;
+        }
+    }
+
+    let mangMot = [];
+    mangMot.push(new Student("01", "Tài", "C02", "Module1"))
+    mangMot.push(new Student("02", "Thuận", "C02", "Module1"))
+
+    function taoBang() {
+        bangMot = "<table border='1'>\n" +
+            "    <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Mã</th>\n" +
+            "        <th>Tên</th>\n" +
+            "        <th>Lớp</th>\n" +
+            "        <th>Module</th>\n" +
+            "    </tr>";
+        for (let i = 0; i < mangMot.length; i++) {
+            bangMot += "<tr>\n" +
+                "        <th>" + (i + 1) + "</th>\n" +
+                "        <th>" + mangMot[i].ma + "</th>\n" +
+                "        <th>" + mangMot[i].ten + "</th>\n" +
+                "        <th>" + mangMot[i].lop + "</th>\n" +
+                "        <th>" + mangMot[i].module + "</th>\n" +
+                "    </tr>"
+        }
+        bangMot += "</table>";
+        document.getElementById("taobang").innerHTML = bangMot;
+    }
+
+    taoBang();
+
+    function xoaBang() {
+        let xoa = prompt("nhập mã bạn muốn xóa");
+        for (let i = 0; i < mangMot.length; i++) {
+            if (xoa == mangMot[i].ma) {
+                mangMot.splice(i, 1);
+            }
+        }
+        taoBang();
+    }
+
+    function themBang() {
+        let kiemTra = confirm("có muốn thêm khôn");
+        if (kiemTra == true) {
+            let ma = prompt("nhập mã mới");
+            let ten = prompt("nhập tên mới");
+            let lop = prompt(" nhập lớp mới");
+            let module = prompt("nhập module mới");
+            mangMot.push(new Student(ma, ten, lop, module));
+        }else {
+            alert("khôn thì thui");
+        }
+
+        taoBang();
+    }
+
+    function chinhBang() {
+        let suaBang = prompt("nhập mã bạn muốn sửa");
+        let kiemTra = confirm("đúng mã chưa zọ");
+        if (kiemTra == true) {
+            for (let i = 0; i < mangMot.length; i++) {
+                if (suaBang == mangMot[i].ma) {
+                    mangMot[i].setMa(prompt("nhập mã bạn muốn thay đổi"));
+                    mangMot[i].setTen(prompt("nhập tên bạn muốn thay đổi"));
+                    mangMot[i].setLop(prompt("nhập lớp bạn muốn thay đổi"));
+                    mangMot[i].setModule(prompt("nhập module bạn muốn thay đổi"));
+                }
+            }
+        } else {
+            alert("chắc bạn bấm nhầm nhỉ");
+        }
+        taoBang();
+    }
+
+</script>

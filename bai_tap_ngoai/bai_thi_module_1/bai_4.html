@@ -46,20 +46,23 @@
             return this.gia;
         }
 
-        setMa(value) {
-            this.ma = value;
+        setMa(ma) {
+            this.ma = ma;
         }
 
-        setTen(value) {
-            this.ten = value;
+        setTen(ten) {
+            this.ten = ten;
         }
 
-        setTenHang(value) {
-            this.tenHang = value;
+        setTenHang(tenHang) {
+            this.tenHang = tenHang;
         }
 
-        setGia(value) {
-            this.gia = value;
+        setGia(gia) {
+            this.gia = gia;
+        }
+        toString(value){
+           return  "ma "+this.ma +"ten "+this.ten + "tenHang "+ this.tenHang +"gia "+this.gia;
         }
     }
 
@@ -106,7 +109,7 @@
         let ma = prompt("nhập mã");
         let ten=prompt("nhập tên");
         let tenHang=prompt("nhập tên hàng");
-        let gia = prompt("nhập giá tiền");
+        let gia = +prompt("nhập giá tiền");
         let tong = new MayTinh(ma,ten,tenHang,gia);
         arr.push(tong);
         taoBang(arr);
@@ -117,7 +120,7 @@
             if (a==arr[i].ma){
                 arr[i].setTen(prompt("nhập tên mới"));
                 arr[i].setTenHang(prompt("nhập tên hàng"));
-                arr[i].setGia(prompt("nhập giá"));
+                +arr[i].setGia(prompt("nhập giá"));
             }
         }
         taoBang(arr);
